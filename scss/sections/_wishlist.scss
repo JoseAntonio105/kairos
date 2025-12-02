@@ -1,0 +1,320 @@
+<!--Fase2: ¿Cómo has generado este SCSS? Está totalmente al margen de los estilos definidos en las variables!!!-->
+.wishlist-pc,
+.wishlist-pc * {
+  box-sizing: border-box;
+}
+
+.wishlist-pc {
+  background: #1c0538;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .lista-de-deseados {
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: 1200px) {
+      padding: 30px 20px;
+    }
+
+    .lista-de-deseos-pc {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      max-width: 1200px;
+      position: relative;
+
+      @media (max-width: 1200px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+      }
+
+      .tarjeta,
+      .tarjeta2 {
+        background: var(--morado-secundario, #5e3a8b);
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        @media (max-width: 1200px) {
+          flex-direction: column;
+          width: calc(50% - 7.5px);
+          gap: 15px;
+          padding: 15px;
+        }
+
+        .publicacion {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          align-items: flex-start;
+          justify-content: flex-start;
+          flex-shrink: 0;
+          width: 150px;
+          position: relative;
+
+          @media (max-width: 1200px) {
+            width: 100%;
+          }
+
+          .anuncio-de-juego {
+            width: 100%;
+            height: 100px;
+            position: relative;
+            object-fit: cover;
+            border-radius: 5px;
+
+            @media (max-width: 1200px) {
+              height: 120px;
+            }
+          }
+        }
+
+        .texto {
+          padding: 0px;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          align-items: flex-start;
+          justify-content: center;
+          flex: 1;
+          position: relative;
+
+          @media (max-width: 1200px) {
+            width: 100%;
+            align-items: flex-start;
+          }
+
+          .day-z {
+            color: #ffffff;
+            text-align: left;
+            font-family: var(--h1-font-family, "GasoekOne-Regular", sans-serif);
+            font-size: 20px;
+            font-weight: var(--h1-font-weight, 400);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            @media (max-width: 1200px) {
+              font-size: 16px;
+            }
+          }
+
+          .rese-as-en-espa-ol-de-espa-a-muy-positivos {
+            color: #ffffff;
+            text-align: left;
+            font-family: var(--body-text-3-font-family, "Inter-Regular", sans-serif);
+            font-size: 12px;
+            font-weight: var(--body-text-3-font-weight, 400);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            @media (max-width: 1200px) {
+              font-size: 10px;
+            }
+          }
+
+          .fecha-de-lanzamiento-13-12-2018 {
+            color: #ffffff;
+            text-align: left;
+            font-family: var(--body-text-3-font-family, "Inter-Regular", sans-serif);
+            font-size: 12px;
+            font-weight: var(--body-text-3-font-weight, 400);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            @media (max-width: 768px) {
+              font-size: 10px;
+            }
+          }
+        }
+
+        .precio-carrito {
+          background: var(--principal, #1c0538);
+          border-radius: 5px;
+          display: flex;
+          flex-direction: row;
+          gap: 15px;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          padding: 10px 20px;
+          position: relative;
+
+          @media (max-width: 1200px) {
+            width: 100%;
+            padding: 8px 15px;
+            gap: 10px;
+          }
+
+          .frame-precio {
+            padding: 0px;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative;
+
+            ._47-99 {
+              color: #ffffff;
+              text-align: center;
+              font-family: var(--body-text-1-font-family, "Inter-Regular", sans-serif);
+              font-size: 18px;
+              font-weight: var(--body-text-1-font-weight, 400);
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              @media (max-width: 1200px) {
+                font-size: 14px;
+              }
+            }
+          }
+
+          .frame-linea,
+          .frame-linea2,
+          .frame-linea3,
+          .frame-linea4 {
+            display: none;
+          }
+
+          .frame-a-adir-al-carrito {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+
+            // Efecto hover con borde
+            &:hover {
+              border: 2px solid #ffffff;
+              transform: translateY(-2px);
+              box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+            }
+
+            &:active {
+              transform: translateY(0);
+            }
+
+            .a-adir-al-carro {
+              color: #ffffff;
+              text-align: center;
+              font-family: var(--body-text-1-font-family, "Inter-Regular", sans-serif);
+              font-size: 16px;
+              font-weight: var(--body-text-1-font-weight, 400);
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              white-space: nowrap;
+
+              @media (max-width: 1200px) {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+
+      .boton {
+        padding: 20px 0;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+
+        @media (max-width: 1200px) {
+          width: 100%;
+          padding: 15px 0;
+        }
+
+        .frame-8 {
+          background: var(--principal-de-acento, #6f12e0);
+          border-radius: 15px;
+          padding: 15px 40px;
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          cursor: pointer;
+          transition: background 0.3s ease;
+
+          @media (max-width: 1200px) {
+            padding: 12px 30px;
+          }
+
+          &:hover {
+            background-color: var(--secundario, #b200ff);
+            cursor: pointer;
+            transition: background 0.3s ease;
+          }
+
+          .eliminar-todo {
+            color: var(--texto-principal, #ffffff);
+            text-align: center;
+            font-family: var(--h1-font-family, "GasoekOne-Regular", sans-serif);
+            font-size: 24px;
+            font-weight: var(--h1-font-weight, 400);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media (max-width: 1200px) {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

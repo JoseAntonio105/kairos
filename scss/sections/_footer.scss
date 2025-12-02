@@ -1,0 +1,133 @@
+.kairos-footer {
+    background: $primario;
+    color: $texto_claro;
+    padding: 1.5rem 1rem;
+
+    .kairos-footer-container {
+        max-width: 1000px;
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+
+    // LINKS (izquierda)
+    .kairos-footer-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        a {
+            font-family: $headings-font-family;
+            font-weight: $headings-font-weight;
+            color: $texto_claro;
+            text-decoration: none;
+            font-size: 1.1rem;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+
+    // ICONOS (derecha)
+    .kairos-footer-social {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        a {
+            color: $texto_claro;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 40px;
+            height: 40px;
+            border-radius: 0.5rem;
+            background: $texto_claro;
+            color: $primario;
+
+            i {
+                font-size: 1.3rem;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+// Responsividad
+@media (max-width: 768px) {
+    .kairos-footer-container {
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .kairos-footer-links a {
+        font-size: 0.9rem;
+    }
+
+    .kairos-footer-social a {
+        width: 32px;
+        height: 32px;
+        
+        i {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .kairos-footer-container {
+        flex-direction: column;
+        gap: 1.25rem;
+        text-align: center;
+    }
+
+    .kairos-footer-links {
+        gap: 1.25rem;
+
+        a {
+            font-size: 0.95rem;
+        }
+    }
+
+    .kairos-footer-social a {
+        width: 32px;
+        height: 32px;
+
+        i {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .kairos-footer-links {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+
+        a {
+            font-size: 0.8rem;
+        }
+    }
+
+    .kairos-footer-social a {
+        width: 28px;
+        height: 28px;
+
+        i {
+            font-size: 0.9rem;
+        }
+    }
+}
+

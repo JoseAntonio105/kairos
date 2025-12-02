@@ -1,0 +1,20 @@
+.products {
+  display: grid;
+  justify-content: center;
+  grid-auto-flow: row;
+  gap: 16px;
+  padding: 16px;
+  grid-template-columns: repeat(4, max-content);
+<!-- Fase 2: hay que usar los mixins de bootstrap media-breakpoints-up -->
+  @media (max-width: 1500px) {
+    grid-template-columns: repeat(3, max-content);
+  }
+
+  @media (max-width: 1130px) {
+    grid-template-columns: repeat(2, max-content);
+  }
+
+  @media (max-width: 760px) {
+    grid-template-columns: repeat(1, max-content);
+  }
+}

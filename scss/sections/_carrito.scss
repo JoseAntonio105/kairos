@@ -1,0 +1,335 @@
+// ==========================================================================
+// ESTILOS COMPLETOS DEL CARRITO (ESTRUCTURA + DISEÑO VISUAL)
+// ==========================================================================
+<!-- Fase 2: ERROR GRAVE: las variables no se definen aquí!, ya están definidas en los SCSS de variables-->
+// --- Variables (Asegúrate de que coincidan con las tuyas) ---
+$principal: #1c0538;            // Fondo oscuro
+$secundario: #5e3a8b;           // Fondo de elementos/tarjetas
+$principal-de-acento: #6f12e0;  // Botones y destacados
+$texto-principal: #ffffff;      // Texto blanco
+$font-title: "GasoekOne-Regular", sans-serif;
+$font-body: "Inter", sans-serif;
+
+// -------------------------------------------------------------------
+// 1. ESTRUCTURA DEL MODAL (El fondo oscuro y el panel lateral)
+// -------------------------------------------------------------------
+
+.modal-backdrop {
+    display: none; 
+    position: fixed;
+    z-index: 1050; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    &.active {
+        display: block;
+        opacity: 1;
+        
+        .modal-content {
+            transform: translateX(0); 
+        }
+    }
+}
+
+.modal-content {
+    background-color: $principal; 
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%; 
+    width: 90%;
+    max-width: 450px; 
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    padding: 25px; // Un poco más de espacio interno
+    box-sizing: border-box;
+    
+    transform: translateX(100%); 
+    transition: transform 0.3s ease-out;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+// -------------------------------------------------------------------
+// 2. CABECERA DEL DRAWER (Título y Botón Cerrar)
+// -------------------------------------------------------------------
+
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba($texto-principal, 0.2); // Línea sutil
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.drawer-title {
+    font-family: $font-title;
+    font-size: 28px;
+    color: $texto-principal;
+    text-transform: uppercase; // Estilo más "fuerte"
+    letter-spacing: 1px;
+}
+
+.close-button {
+    color: $texto-principal;
+    font-size: 40px; // X más grande y fácil de clicar
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 0.8;
+    padding: 0;
+    transition: transform 0.2s;
+
+    &:hover {
+        color: $principal-de-acento;
+        transform: scale(1.1);
+    }
+}
+
+// -------------------------------------------------------------------
+// 3. LISTA DE PRODUCTOS
+// -------------------------------------------------------------------
+
+.product-list {
+    flex-grow: 1; 
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 5px;
+    
+    // Scrollbar personalizada para que se vea integrada
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $secundario;
+        border-radius: 10px;
+    }
+}
+
+.elemento-carrito {
+    background-color: $secundario; // Fondo de la tarjeta de producto
+    border-radius: 12px; // Bordes redondeados modernos
+    display: flex;
+    align-items: center;
+    justify-content: space-between; // Separa info de acciones
+    padding: 12px;
+    gap: 15px;
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: translateY(-2px); // Pequeño efecto al pasar el ratón
+    }
+
+    // Parte Izquierda: Imagen + Textos
+    .producto-media {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-grow: 1;
+        
+        .imagen {
+            width: 70px; // Imagen un poco más grande
+            height: 70px;
+            overflow: hidden;
+            border-radius: 8px;
+            flex-shrink: 0;
+            background-color: #000; // Fondo por si la imagen es transparente
+            
+            .car-tula {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .texto {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            
+            .producto-1 {
+                color: $texto-principal;
+                font-family: $font-title;
+                font-size: 16px;
+                line-height: 1.2;
+                text-transform: uppercase;
+            }
+            
+            ._99 {
+                color: lighten($principal-de-acento, 20%); // Precio destacado
+                font-family: $font-body;
+                font-weight: 700;
+                font-size: 15px;
+            }
+        }
+    }
+
+    // Parte Derecha: Cantidad + Eliminar
+    .item-actions {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-shrink: 0;
+        
+        .trash-icon {
+            cursor: pointer;
+            font-size: 20px;
+            color: rgba($texto-principal, 0.6); // Grisáceo por defecto
+            transition: color 0.2s;
+            
+            &:hover { 
+                color: #ff4d4d; // Rojo al pasar el ratón
+            }
+        }
+    }
+}
+
+// --- CONTROL DE CANTIDAD (Estilizado) ---
+.item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(0,0,0, 0.2); // Fondo oscuro para el control
+    padding: 4px 8px;
+    border-radius: 8px;
+    
+    .quantity-display {
+        width: 20px;
+        text-align: center;
+        color: $texto-principal;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .quantity-controls {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+    }
+
+    .quantity-btn {
+        background: none;
+        border: none;
+        color: $texto-principal;
+        cursor: pointer;
+        padding: 0;
+        line-height: 0.8;
+        font-size: 10px;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 1;
+            color: $principal-de-acento;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+// -------------------------------------------------------------------
+// 4. PIE DEL DRAWER (Subtotal y Botones)
+// -------------------------------------------------------------------
+
+.drawer-footer {
+    padding-top: 20px;
+    border-top: 1px solid rgba($texto-principal, 0.2);
+    margin-top: 15px;
+    flex-shrink: 0;
+
+    .subtotal-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        
+        .subtotal-text {
+            font-family: $font-body;
+            font-size: 18px;
+            color: rgba($texto-principal, 0.8);
+        }
+        
+        .subtotal-price {
+            font-family: $font-title;
+            font-size: 24px;
+            color: $texto-principal;
+        }
+    }
+
+    .action-buttons-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px; // Espacio entre botones
+        width: 100%;
+
+        .action-button {
+            width: 100%;
+            padding: 15px;
+            border-radius: 50px; // Botones muy redondeados (estilo moderno)
+            border: none;
+            font-family: $font-title;
+            font-size: 18px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            
+            &:hover { 
+                transform: scale(1.02); // Efecto pop al pasar ratón
+            }
+            
+            &.comprar {
+                background-color: $principal-de-acento;
+                color: $texto-principal;
+                box-shadow: 0 4px 15px rgba($principal-de-acento, 0.4); // Sombra brillante
+            }
+            
+            &.eliminar {
+                background: transparent;
+                color: rgba($texto-principal, 0.6);
+                border: 2px solid rgba($texto-principal, 0.2);
+                font-size: 14px;
+                padding: 12px;
+                
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.05);
+                    color: $texto-principal;
+                    border-color: $texto-principal;
+                }
+            }
+        }
+    }
+}
+
+// --- Media Queries para Móviles Pequeños ---
+@media (max-width: 480px) {
+    .modal-content {
+        width: 100%; // Pantalla completa
+        max-width: none;
+        border-radius: 0; // Sin bordes redondeados en full screen
+    }
+    
+    .elemento-carrito {
+        padding: 10px;
+        
+        .imagen {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}

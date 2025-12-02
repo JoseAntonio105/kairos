@@ -1,0 +1,163 @@
+.detalles-pc {
+    background: $primario;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2.5rem 0 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $texto_claro;
+    font-family: $font-family-sans-serif;
+    overflow: hidden;
+
+    
+    .detalles-contenedor {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        gap: 2.5rem;
+        padding: 0 3.75rem;
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+            align-items: center;
+            padding: 0 1.25rem;
+        }
+    }
+
+    .detalles-imagen {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            max-width: 480px;
+            border-radius: $border-radius-lg;
+            box-shadow: 0 4px 20px rgba($texto_claro, 0.15);
+        }
+    }
+
+    .detalles-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.15rem;
+        justify-content: center;
+
+        .detalles-titulo {
+            font-family: $headings-font-family;
+            font-weight: $headings-font-weight;
+            font-size: 2.4rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .detalles-plataforma {
+            display: none;
+        }
+
+        .detalles-datos {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            font-size: 0.95rem;
+
+            strong {
+                color: lighten($resalte, 25%);
+            }
+        }
+
+        .detalles-descripcion {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        .detalles-precio {
+            font-size: 2rem;
+            font-family: $headings-font-family;
+            letter-spacing: 2px;
+        }
+
+        .detalles-boton {
+            background-color: $resalte;
+            border-radius: $border-radius-lg;
+            padding: 0.8rem 0;
+            width: 100%;
+            text-align: center;
+            font-family: $headings-font-family;
+            font-weight: $headings-font-weight;
+            font-size: 1.3rem;
+            color: $texto_claro !important;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 5px;
+            letter-spacing: 1px;
+
+            &:hover {
+                background-color: lighten($resalte, 10%);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba($texto_claro, 0.25);
+            }
+        }
+    }
+
+    .requs-titulo {
+        margin-top: 4rem;
+        font-family: $headings-font-family;
+        font-weight: $headings-font-weight;
+        font-size: 1.9rem;
+        letter-spacing: 2px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .requs-contenedor {
+        width: 100%;
+        max-width: 1000px;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 0 1.25rem;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .requs-bloque {
+            background: $secundario;
+            padding: 1.2rem 1.5rem;
+            border-radius: $border-radius-lg;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 4px 16px rgba($texto_claro, 0.15);
+
+            .requs-sub {
+                font-family: $headings-font-family;
+                font-weight: $headings-font-weight;
+                font-size: 1.25rem;
+                margin-bottom: 0.7rem;
+                color: $texto_claro;
+                text-transform: uppercase;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                font-size: 0.9rem;
+
+                li {
+                    margin-bottom: 6px;
+
+                    strong {
+                        color: lighten($resalte, 20%);
+                    }
+                }
+            }
+        }
+    }
+}

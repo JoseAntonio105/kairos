@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev:win": "concurrently \"sass --watch scss/styles.scss:css/styles.css --load-path=node_modules\" \"php -S localhost:80\"",
+    "dev:linux": "sass -w scss:css --load-path=node_modules & php -S localhost:70"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.11.3"
+  },
+  "devDependencies": {
+    "sass": "^1.94.2",
+    "concurrently": "^9.1.0"
+  }
+}

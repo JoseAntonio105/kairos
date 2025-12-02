@@ -1,0 +1,111 @@
+.product-card {
+    background: $secundario;
+    border-radius: 2rem;
+    padding: 0.6rem;
+    width: auto;
+    max-width: 360px;
+    justify-self: center;
+    color: $texto_claro;
+    font-family: $font-family-sans-serif;
+    margin-top: 1rem;
+    .product-card-inner {
+        background: $primario;
+        border-radius: 1.7rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ================= PARTE SUPERIOR: IMAGEN ================= */
+    .product-card-media {
+        position: relative;
+        border-radius: 1.7rem 1.7rem 0 0;
+        overflow: hidden;
+        background: $primario;
+        aspect-ratio: 16 / 9;
+        display: block;    
+        cursor: pointer;  
+
+    }
+
+    .product-card-cover {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .product-card-platform {
+        position: absolute;
+        top: 0.8rem;
+        left: 0.8rem;
+        width: 3.0rem;
+        height: 3.0rem;
+        border-radius: 0%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 2.6rem;
+            height: 2.6rem;
+            object-fit: contain;
+        }
+    }
+
+    .product-card-discount {
+        position: absolute;
+        top: 0.9rem;
+        left: 3.8rem;
+        font-family: $headings-font-family;
+        font-weight: $headings-font-weight;
+        font-size: 1.9rem;
+        color: $texto_claro;
+        text-shadow:
+            -2px -2px 0 $resalte,
+             2px -2px 0 $resalte,
+            -2px  2px 0 $resalte,
+             2px  2px 0 $resalte;
+    }
+
+    /* ============== PARTE INFERIOR: PRECIO + BOTÓN ============== */
+    .product-card-bottom {
+        background: $primario;
+        border-radius: 0 0 1.7rem 1.7rem;
+        padding: 0.75rem;
+        border-top: 0.6rem solid $secundario;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .product-card-price,
+    .product-card-button {
+        background: $resalte;
+        text-align: center;
+        font-family: $headings-font-family;
+        font-weight: $headings-font-weight;
+        color: $texto_claro;
+    }
+
+    .product-card-price {
+        border-radius: 1.3rem 1.3rem 0 0;
+        border-bottom-width: 0.25rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 1.6rem;
+    }
+
+    .product-card-button {
+        border-radius: 0 0 1.3rem 1.3rem;
+        border-top-width: 0.25rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 1.05rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+            filter: brightness(1.05);
+        }
+    }
+}

@@ -1,0 +1,128 @@
+// --- Variables de Color ---
+<!-- Fase 2: ERROR GRAVE: las variables no se definen aquí!, ya están definidas en los SCSS de variables-->
+
+$color-principal-fondo: #210330;     
+$color-secundario-fondo: #380753;   
+$color-texto-claro: #ffffff;          
+$color-acento-purpura: #b200ff;       
+
+.trabaja-con-nosotros-pc {
+    color: $color-texto-claro;
+    font-family: sans-serif;
+    min-height: 100vh;
+    padding: 0 10px 50px 10px;
+    height: 10px;
+}
+
+.condiciones-generales-de-venta {
+ 
+    margin: 50px auto 0;
+    padding: 0; 
+    text-align: center;
+
+    .t-tulo {
+        font-size: 1.8em;
+        font-weight: bold;
+        margin-bottom: 45px;
+        color: $color-texto-claro;
+        text-transform: uppercase;
+        
+        padding: 0 10px
+    }
+
+    .texto {
+        font-size: 1.2em;
+        line-height: 1.7;
+        text-align: justify;
+       
+        padding: 0 15px; 
+        
+        .texto-span {
+            display: block;
+            margin-bottom: 35px;
+            font-weight: 600;
+        }
+
+        .texto-span2, .texto-span3 {
+            display: block;
+            height: 10px;
+        }
+    }
+}
+
+.formulario {
+    max-width: 700px; 
+    margin: 80px auto 30px;
+    padding: 30px 20px;
+    text-align: center;
+
+    .t-tulo2 {
+        font-size: 1.8em;
+        font-weight: bold;
+        margin-bottom: 40px;
+        color: $color-texto-claro;
+        text-transform: uppercase;
+    }
+
+    .inputs {
+        padding: 0 20px;
+
+        .correo-electr-nico {
+            margin-bottom: 25px;
+
+            .t-tulo3 {
+                text-align: left;
+                margin-bottom: 10px;
+                font-weight: bold;
+                font-size: 1.1em;
+            }
+
+            .input {
+                height: 45px;
+                width: 100%;
+                box-sizing: border-box;
+                background-color: $color-texto-claro;
+                border: none;
+                border-radius: 5px;
+            }
+        }
+
+        .mensaje {
+            .t-tulo4{
+                text-align: left;
+                margin-bottom: 10px;
+                font-weight: bold;
+                font-size: 1.1em;
+            }
+
+            .input2 {
+                height: 180px;
+                width: 100%;
+                box-sizing: border-box;
+                background-color: $color-texto-claro;
+                border: none;
+                border-radius: 5px;
+                resize: vertical;
+            }
+        }
+
+        .boton-trabaja-con-nosotros {
+            display: inline-block;
+            background-color: #6f12e0;
+            padding: 12px 60px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            &:hover {
+                background-color: darken($color-acento-purpura, 10%);
+            }
+
+            .texto2 {
+                font-weight: bold;
+                text-transform: uppercase;
+                color: $color-texto-claro;
+                font-size: 1.1em;
+            }
+        }
+    }
+}

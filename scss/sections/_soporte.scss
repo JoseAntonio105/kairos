@@ -1,0 +1,159 @@
+// Variables (Asumo que tienes estas variables definidas en otro archivo SCSS que se importa)
+// $principal: #1c0538;
+// $texto-principal: #ffffff;
+// $h1-font-family: "GasoekOne-Regular", sans-serif;
+// $h1-font-size: 32px;
+// $h1-font-weight: 400;
+// $h2-font-family: "GasoekOne-Regular", sans-serif;
+// $body-text-1-font-family: "Inter-Regular", sans-serif;
+// $body-text-1-font-size: 32px;
+// $body-text-1-font-weight: 400;
+
+.soporte{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.soporte-pc {
+  background: var(--principal, #1c0538);
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 50px;
+
+
+  .qu-enes-somos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    .t-tulo {
+      color: var(--texto-principal, #ffffff);
+      text-align: center;
+
+      font-family: var(--h1-font-family, "GasoekOne-Regular", sans-serif);
+      font-size: var(--h1-font-size, 32px);
+      font-weight: var(--h1-font-weight, 400);
+    }
+
+    .texto {
+      color: var(--texto-principal, #ffffff);
+      text-align: justify;
+      line-height: 1.6;
+      font-family: var(--h2-font-family, "GasoekOne-Regular", sans-serif);
+      font-size: 18px;
+    }
+  }
+
+  .opciones {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .card-de-soporte {
+      background: #5a3a7f;
+      border-radius: 8px;
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      flex: 1;
+      min-width: 280px;
+      max-width: 350px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .icono {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 25px;
+        filter: brightness(0) invert(1);
+        object-fit: contain;
+        order: 1;
+      }
+
+      .texto2 {
+        color: var(--texto-principal, #ffffff);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 2;
+
+        .t-tulo2 {
+          font-family: var(--h2-font-family, "GasoekOne-Regular", sans-serif);
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: 1px;
+          margin-bottom: 15px;
+          order: 1;
+        }
+
+        .texto-descriptivo {
+          font-family: var(--h2-font-family, "GasoekOne-Regular", sans-serif);
+          font-size: 14px;
+          line-height: 1.6;
+          opacity: 0.9;
+          order: 2;
+        }
+      }
+    }
+  }
+}
+
+// Media Queries Anidadas
+@media (max-width: 1024px) {
+  .soporte-pc .opciones {
+    gap: 20px;
+
+    .card-de-soporte {
+      max-width: 300px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .soporte {
+    overflow-y: auto;
+
+    .soporte-pc{
+      padding: 40px 15px 60px;
+      overflow-y: visible;
+    }
+
+    .qu-enes-somos {
+      .t-tulo {
+        font-size: 24px;
+      }
+
+      .texto {
+        font-size: 16px;
+      }
+    }
+
+    .opciones {
+      flex-direction: column;
+      align-items: center;
+
+      .card-de-soporte {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

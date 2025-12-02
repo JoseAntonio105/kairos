@@ -1,0 +1,38 @@
+// 
+// Colors
+// 
+
+//- Override and add to color system
+/*
+$primario: #1c0538;
+$secundario: #5e3a8b;
+$resalte: #6f12e0;
+$texto_claro: #fffdfa;
+$texto_oscuro: #0a0f0f;
+$fondo: #0a0f0f;
+*/
+
+$primario: #1c0538;
+$secundario: #5e3a8b;
+$resalte: #6f12e0;
+$texto_claro: #fffdfa;
+$texto_oscuro: #0a0f0f;
+$fondo: #0a0f0f;
+
+//- Override primary color
+$primary: $primario;
+$secondary: $secundario;
+$success: $resalte;
+$info: $resalte;
+$warning: $resalte;
+$danger: $resalte;
+$light: $texto_claro;
+$dark: $texto_oscuro;
+$body-bg: $primario;
+
+//- Component specific colors
+$colorboton: $resalte;
+
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+$min-contrast-ratio: 2.4;

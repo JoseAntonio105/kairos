@@ -1,0 +1,143 @@
+.kairos-header {
+    width: 100%;
+    background: $primario;
+    padding: 0.5rem 1rem;
+    .kairos-header-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .kairos-logo img {
+        height: 60px;
+    }
+
+    // ===== Barra grande: menú + buscador + lupa =====
+    .kairos-bar {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        background: $resalte;
+        border-radius: 999px;
+        padding: 0.35rem 0.75rem;
+    }
+
+    .kairos-menu-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .kairos-menu-btn {
+        background: transparent;
+        border: none;
+        color: $texto_claro;
+        width: 2.7rem;
+        height: 2.7rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 1.4rem;
+        padding: 0;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    // quitar triángulo del dropdown
+    .kairos-menu-btn::after {
+        display: none;
+    }
+
+    .kairos-search {
+        flex: 1;
+
+        input {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 0.55rem 1rem;
+            border-radius: 999px;
+            background: $texto_claro;
+            color: $texto_oscuro;
+            font-size: 1rem;
+        }
+        
+    }
+
+    .kairos-search-btn {
+        background: transparent;
+        border: none;
+        color: $texto_claro;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 1.3rem;
+        padding: 0;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    // ===== Barra pequeña: usuario + carrito =====
+    .kairos-actions-bar {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: $resalte;
+        border-radius: 999px;
+        padding: 0.35rem 0.75rem;
+    }
+
+    .kairos-action-btn {
+        background: transparent;
+        border: none;
+        color: $texto_claro;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 1.3rem;
+        padding: 0;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    // ===== Dropdown del menú =====
+    .kairos-menu-dropdown {
+        background: $primario;
+        border: 1px solid $resalte;
+        border-radius: 0.75rem;
+        padding: 0.25rem 0;
+        min-width: 200px;
+        margin-top: 0.6rem;
+        z-index: 1050;
+    }
+
+    .kairos-menu-dropdown .dropdown-item {
+        color: $texto_claro;
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+
+        &:hover {
+            background: $resalte;
+            color: $texto_claro;
+        }
+    }
+}   

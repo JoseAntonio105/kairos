@@ -1,0 +1,269 @@
+.con-cenos-pc {
+  background: var(--principal, #1c0538);
+  padding: 47px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.conocenos {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.qu-enes-somos {
+  background: var(--principal, #1c0538);
+  padding: 41px 26px 41px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.t-tulo1 {
+  color: var(--texto-principal, #ffffff);
+  text-align: center;
+  font-family: var(--h1-font-family, "GasoekOne-Regular", sans-serif);
+  font-size: var(--h1-font-size, 25px);
+  font-weight: bold;
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.texto {
+  color: var(--texto-principal, #ffffff);
+  text-align: left;
+  font-family: var(--body-text-1-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--body-text-1-font-size, 22px);
+  font-weight: var(--body-text-1-font-weight, 400);
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.historia,
+.obtener-clave {
+  background: var(--principal, #1c0538);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.imagen {
+  align-self: stretch;
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.campo-de-texto {
+  margin: 0;
+  background: var(--principal, #1c0538);
+  padding: 41px 26px 41px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  align-self: stretch;
+}
+
+.objetivo {
+  background: var(--principal, #1c0538);
+  padding: 41px 26px 41px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.quieres-unirte-a-nosotros {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.cabecera2 {
+  width: auto;
+  color: var(--texto-principal, #ffffff);
+  text-align: center;
+  font-family: var(--h1-font-family, "GasoekOne-Regular", sans-serif);
+  font-size: var(--h1-font-size, 32px);
+  font-weight: var(--h1-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton-conocenos {
+  background-color: var(--principal-de-acento, #6f12e0);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 155px;
+  height: 64px;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    background-color: var(--secundario, #b200ff);
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+}
+
+.texto2 {
+  color: var(--texto-principal, #ffffff);
+  text-align: center;
+  font-family: var(--h1-font-family, "GasoekOne-Regular", sans-serif);
+  font-size: var(--h1-font-size, 22px);
+  font-weight: var(--h1-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .con-cenos-pc {
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .qu-enes-somos {
+    padding: 20px 15px;
+    gap: 20px;
+  }
+
+  .t-tulo1 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .texto {
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.5;
+  }
+
+  .historia,
+  .obtener-clave {
+    flex-direction: column;
+  }
+
+  .imagen {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+  }
+
+  .campo-de-texto {
+    padding: 20px 15px;
+    gap: 20px;
+  }
+
+  .objetivo {
+    padding: 20px 15px;
+    gap: 20px;
+  }
+
+  .quieres-unirte-a-nosotros {
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .cabecera2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .boton-conocenos {
+    width: 140px;
+    height: 55px;
+  }
+
+  .texto2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .t-tulo1 {
+    font-size: 18px;
+  }
+
+  .texto {
+    font-size: 14px;
+  }
+
+  .cabecera2 {
+    font-size: 20px;
+  }
+
+  .boton-conocenos {
+    width: 130px;
+    height: 50px;
+  }
+
+  .texto2 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .historia,
+  .obtener-clave {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .imagen {
+    width: 50%;
+    height: 340px;
+  }
+
+  .campo-de-texto {
+    flex: 1;
+  }
+}

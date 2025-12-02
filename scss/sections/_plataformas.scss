@@ -1,0 +1,128 @@
+.plataformas-pc {
+    background: $primario;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacer * 2.5;
+    padding-bottom: $spacer * 4;
+
+    
+    .titulo-plataformas {
+        color: $texto_claro;
+        font-family: $headings-font-family;
+        font-weight: $headings-font-weight;
+        font-size: 2rem;
+        margin-top: 2rem;
+        letter-spacing: 2px;
+        text-align: center;
+        text-transform: uppercase;
+<!--Fase2: Tienes que usar para esto los mixins de Boostrap (media-breakpoint-up)-->
+        @media (max-width: 768px) {
+            font-size: 1.5rem;
+            margin-top: 1.2rem;
+        }
+    }
+
+    .grid-plataformas {
+        width: 100%;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        justify-items: center;
+        padding: 0 3rem;
+
+        @media (max-width: 900px) {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+
+        .product-card {
+            width: 100%;
+            max-width: 420px;
+            border: $border-width * 2 solid $resalte;
+            border-radius: $border-radius-lg;
+            padding: 0.35rem;
+            text-decoration: none;
+            color: $texto_claro;
+            font-family: $font-family-sans-serif;
+            transition: transform 0.25s ease;
+            position: relative;
+            overflow: hidden;
+            background: transparent;
+
+            &:hover {
+                transform: translateY(-6px);
+            }
+
+            .product-card-inner {
+                border-radius: $border-radius-lg;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                background: $secundario;
+            }
+
+            .product-card-media {
+                width: 100%;
+                height: 220px;
+                overflow: hidden;
+                border-radius: $border-radius-lg $border-radius-lg 0 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img.product-card-cover {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                    transition: filter 0.3s ease, transform 0.3s ease;
+                }
+            }
+
+            .product-card-bottom {
+                background: $resalte;
+                padding: 0.6rem 0;
+                text-align: center;
+                border-radius: 0 0 $border-radius-lg $border-radius-lg;
+                border-top: $border-width * 2 solid $secundario;
+
+                .product-card-price {
+                    font-family: $headings-font-family;
+                    font-weight: $headings-font-weight;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    color: $texto_claro;
+                }
+            }
+        }
+
+        .product-card::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba($resalte, 0.25), transparent 60%);
+            transform: scale(0);
+            opacity: 0;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .product-card:hover::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .product-card:hover .product-card-media img {
+            filter: brightness(1.15);
+            transform: scale(1.04);
+        }
+    }
+}

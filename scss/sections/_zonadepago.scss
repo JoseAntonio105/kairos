@@ -1,0 +1,594 @@
+<!-- Fase 2: ERROR GRAVE: las variables no se definen aquí!, ya están definidas en los SCSS de variables-->
+
+// --- Variables de Color (Inferred from CSS) ---
+$principal: #1c0538;
+$secundario: #5e3a8b;
+$principal-de-acento: #6f12e0;
+$texto-principal: #ffffff;
+$texto-oscuro: #333333; // Añadido para los inputs
+
+// --- Variables de Tipografía (Inferred from CSS) ---
+$h1-font-family: "GasoekOne-Regular", sans-serif;
+$h1-font-size-pc: 28px;
+$h1-font-size-mobile: 24px;
+$h1-font-weight: 400;
+
+$h2-font-family: "GasoekOne-Regular", sans-serif;
+$h2-font-size-pc: 22px;
+$h2-font-size-mobile: 18px;
+$h2-font-weight: 400;
+
+$h3-font-family: "GasoekOne-Regular", sans-serif;
+$h3-font-size-pc: 20px;
+$h3-font-size-mobile: 16px;
+$h3-font-weight: 400;
+
+$body-text-1-font-family: "Inter-Regular", sans-serif;
+$body-text-1-font-size-pc: 20px;
+$body-text-1-font-size-mobile: 16px;
+$body-text-1-font-weight: 400;
+
+// --- Nuevo: Variables para el divisor (Líneas divisorias blancas) ---
+$divider-color: #ffffff; 
+$divider-thickness: 1px;
+
+// -----------------------------------------------------------------------------
+// Componente Principal
+// -----------------------------------------------------------------------------
+.zona-de-pago-pc {
+  &, * {
+    box-sizing: border-box;
+  }
+
+  background: $principal;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  height: auto;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  // ---------------------------------------------------------------------------
+  // Contenido del Carrito (principal)
+  // ---------------------------------------------------------------------------
+  .carrito2 {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+
+    .frame-9 {
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      align-items: flex-start;
+      justify-content: center;
+      width: 100%;
+      max-width: 1000px;
+      height: auto;
+      position: relative;
+      overflow: hidden;
+
+      .frame-5 {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px; // Espacio entre elementos del carrito (más juntos)
+        align-items: center;
+        justify-content: flex-start;
+        flex: 2;
+        position: relative;
+        overflow: hidden;
+        min-width: 380px;
+      }
+
+      .elemento-carrito {
+        // Estilos para hacer el producto más corto y compacto
+        background: $secundario;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+        justify-content: flex-start;
+        align-self: stretch;
+        flex-shrink: 0;
+        height: 70px; 
+        position: relative;
+        overflow: hidden;
+        padding: 6px; 
+
+        .imagen {
+          border-radius: 6px;
+          padding: 3px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          width: 55px; 
+          height: 55px; 
+          position: relative;
+          overflow: hidden;
+
+          .car-tula {
+            border-radius: 4px;
+            align-self: stretch;
+            flex: 1;
+            position: relative;
+            object-fit: cover;
+          }
+        }
+
+        .texto {
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+          align-items: flex-start;
+          justify-content: center;
+          flex: 1;
+
+          .titulo {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            justify: space-between;
+            align-self: stretch;
+            height: auto;
+
+            .producto-1 {
+              font: $h3-font-weight 18px / 1 $h3-font-family;
+              color: $texto-principal;
+              text-align: left;
+              flex: 1;
+              height: auto;
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+            }
+
+            ._99 {
+              font: $h3-font-weight 18px / 1 $h3-font-family;
+              color: $texto-principal;
+              text-align: right;
+              align-self: stretch;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+            }
+          }
+          // Añadido para la descripción/texto secundario
+          .descripci-n-o-plataforma {
+              color: #ccc;
+              font-family: "Inter-Regular", sans-serif;
+              font-size: 14px;
+          }
+        }
+
+        .botones {
+          padding: 3px;
+          display: flex;
+          flex-direction: row;
+          gap: 8px;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          width: 80px;
+          height: auto;
+
+          ._1 {
+            color: $texto-principal;
+            text-align: center;
+            font-family: "Raleway-SemiBold", sans-serif;
+            font-size: 16px;
+            line-height: 100%;
+            font-weight: 600;
+            width: auto;
+            height: auto;
+          }
+
+          .group-4, .group-42, .group-43 {
+            width: 14px;
+            height: 14px;
+            position: relative;
+            overflow: visible;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.8;
+            }
+          }
+
+          .trash-streamline-heroicons-outline,
+          .trash-streamline-heroicons-outline2,
+          .trash-streamline-heroicons-outline3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            position: relative;
+            overflow: visible;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.8;
+            }
+          }
+        }
+      }
+
+      // ------------------------------------------------------------------------
+      // Resumen del Pedido (Divisores y Nítido)
+      // ------------------------------------------------------------------------
+      .frame-25 {
+        flex: 1;
+        max-width: 320px;
+        align-self: stretch;
+      }
+      
+      .frame-26 {
+        max-width: 320px;
+        padding: 20px; /* Amplio */
+        background: $secundario;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Amplio */
+        align-items: center;
+        justify-content: flex-start;
+        align-self: stretch;
+      }
+
+      .resumen-del-pedido {
+        /* Título con línea divisoria inferior */
+        color: $texto-principal;
+        text-align: left;
+        font: $h1-font-weight $h1-font-size-pc / 1 $h1-font-family;
+        width: 100%;
+        height: auto;
+        padding-bottom: 15px;
+        border-bottom: $divider-thickness solid $divider-color; /* Línea divisoria */
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      /* Base style for all detail rows (Subtotal, Envío, Devolución) */
+      .frame-28, .frame-29, .frame-30 {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        align-self: stretch;
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      /* Styles for detail text (Subtotal, Shipping, etc.) - Nítido */
+      .subtotal-x-productos,
+      .env-o-estimado {
+          color: $texto-principal;
+          text-align: left;
+          font: $body-text-1-font-weight $body-text-1-font-size-pc / 1 $body-text-1-font-family;
+          flex: 1;
+      }
+
+      /* Styles for detail prices/values - Nítido, con énfasis */
+      ._992, .gratuito {
+          color: $texto-principal;
+          text-align: right;
+          font: 600 $body-text-1-font-size-pc / 1 $body-text-1-font-family; 
+      }
+      
+      /* Style for the information row (Devolución) */
+      .devoluci-n-gratuita-en-30-d-as {
+        color: $texto-principal;
+        text-align: center;
+        font: $body-text-1-font-weight 14px / 1 $body-text-1-font-family;
+        font-style: italic;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+
+      /* Specific style for the Total row frame (frame-33) - Línea divisoria superior */
+      .frame-33 {
+          padding: 0;
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          align-items: center;
+          justify-content: space-between;
+          align-self: stretch;
+          flex-shrink: 0;
+          position: relative;
+          overflow: hidden;
+          
+          padding-top: 15px; /* Espacio superior para la línea */
+          margin-top: 10px;
+          border-top: $divider-thickness solid $divider-color; 
+      }
+
+      /* Styles for Total text and price - Más grande (H2) */
+      .total-del-pedido {
+          color: $texto-principal;
+          text-align: left;
+          font: $h2-font-weight $h2-font-size-pc / 1 $h2-font-family;
+          flex: 1;
+          height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          
+          /* Overriding old total styles if they exist in the HTML structure */
+          padding-top: 0 !important; 
+          border-top: none !important; 
+          margin-top: 0 !important;
+      }
+
+      ._993 { /* Total price */
+          color: $texto-principal;
+          text-align: right;
+          font: $h2-font-weight $h2-font-size-pc / 1 $h2-font-family;
+          width: auto;
+          height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+      }
+
+      // Botón Confirmar Pedido (CENTRADOS APLICADOS)
+      .frame-72 {
+        background: $principal-de-acento;
+        border-radius: 8px;
+        padding: 10px 15px; /* Restaurado a padding más estándar */
+        height: auto; /* Altura automática en lugar de 50px */
+        margin-top: 25px; /* Restaurado a un margen más grande */
+        transition: background-color 0.3s ease;
+        
+        display: flex; /* Centrado */
+        align-items: center; /* Centrado vertical */
+        justify-content: center; /* Centrado horizontal */
+
+        &:hover {
+            background: darken($principal-de-acento, 10%);
+        }
+
+        .confirmar-pedido {
+          color: $texto-principal;
+          font: $h1-font-weight 24px / 1 $h1-font-family; /* Restaurado */
+          cursor: pointer;
+          text-align: center; /* Centrado del texto */
+        }
+      }
+
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Footer (omitted for brevity, assume correct)
+  // ---------------------------------------------------------------------------
+
+  // ---------------------------------------------------------------------------
+  // Media Queries para Móviles
+  // ---------------------------------------------------------------------------
+  @media (max-width: 768px) {
+    padding: 15px 0;
+    gap: 15px;
+
+    .cabecera {
+      height: 60px;
+      padding: 0 10px;
+
+      .logo {
+        width: 55px;
+        height: 40px;
+      }
+
+      .barra-de-b-squeda {
+        height: 40px;
+        padding: 5px 8px;
+
+        .desplegable-de-plataformas, .lupa {
+          width: 20px;
+          height: 20px;
+        }
+
+        .desplegable-plataforma {
+          height: 30px;
+        }
+
+        .desplegable-plataforma input {
+          font-size: 0.85rem;
+        }
+      }
+
+      .usuario {
+        height: 40px;
+        padding: 4px 7px;
+        .usuario2, .carrito {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+
+    .carrito2 {
+      padding: 10px;
+      gap: 15px;
+
+      .frame-9 {
+        // CAMBIO CRUCIAL: Apilar productos y resumen verticalmente en móvil
+        flex-direction: column;
+        gap: 25px; // Aumentamos el espacio entre el carrito y el resumen
+        max-width: 95%;
+
+        .frame-5 {
+          width: 100%;
+          gap: 6px; 
+          // Asegurar que ocupe todo el ancho para centrar
+          min-width: unset; 
+        }
+
+        .elemento-carrito {
+          height: 65px; 
+          gap: 10px;
+          padding: 5px; 
+
+          .imagen {
+            width: 50px; 
+            height: 50px; 
+          }
+
+          .texto {
+            .titulo {
+              .producto-1, ._99 {
+                font-size: 15px;
+              }
+            }
+            .descripci-n-o-plataforma {
+                font-size: 13px;
+            }
+          }
+
+          .botones {
+            width: 65px; 
+            gap: 4px;
+
+            ._1 {
+                font-size: 14px;
+            }
+
+            .group-4, .group-42, .group-43 {
+                width: 12px;
+                height: 12px;
+            }
+
+            .trash-streamline-heroicons-outline,
+            .trash-streamline-heroicons-outline2,
+            .trash-streamline-heroicons-outline3 {
+                width: 20px;
+                height: 20px;
+            }
+          }
+        }
+        
+        // Contenedor del Resumen (ACTUALIZADO MOBILE)
+        .frame-25 {
+            width: 100%; // Ocupa todo el ancho disponible
+            max-width: 100%; // Asegurar que se expanda
+        }
+
+        .frame-26 {
+          max-width: 100%; // Ocupa todo el ancho
+          width: 100%;
+          padding: 18px; 
+          gap: 15px; 
+
+          .resumen-del-pedido {
+            font-size: $h2-font-size-mobile;
+            padding-bottom: 12px;
+            border-bottom: $divider-thickness solid $divider-color; /* Línea divisoria */
+            margin-bottom: 4px;
+          }
+
+          /* Detalle rows */
+          .frame-28, .frame-29, .frame-30 {
+             gap: 8px; 
+          }
+          
+          /* Detail text */
+          .subtotal-x-productos,
+          .env-o-estimado {
+            font-size: $body-text-1-font-size-mobile; 
+          }
+
+          /* Detail prices */
+          ._992, .gratuito {
+            font-size: $body-text-1-font-size-mobile; 
+            font-weight: 600;
+          }
+          
+          /* Total row frame */
+          .frame-33 {
+            padding-top: 12px;
+            margin-top: 4px;
+            border-top: $divider-thickness solid $divider-color; /* Línea divisoria */
+          }
+
+          /* Total text and price */
+          .total-del-pedido {
+            font-size: $h2-font-size-mobile;
+            padding-top: 0 !important; /* Resetting old conflicting style */
+            border-top: none !important; /* Resetting old conflicting style */
+            margin-top: 0 !important; /* Resetting old conflicting style */
+          }
+
+          ._993 {
+            font-size: $h2-font-size-mobile;
+          }
+
+          // Botón Confirmar Pedido (CENTRADOS APLICADOS MOBILE)
+          .frame-72 {
+            height: 45px;
+            margin-top: 15px;
+
+            display: flex; /* Centrado */
+            align-items: center; /* Centrado vertical */
+            justify-content: center; /* Centrado horizontal */
+
+            .confirmar-pedido {
+              font-size: 20px; /* Tamaño un poco más grande para móvil */
+              text-align: center; /* Centrado del texto */
+            }
+          }
+        }
+      }
+
+    .footer {
+      padding: 8px 10px;
+      gap: 10px;
+      min-height: 40px;
+
+      .frame-12 {
+        gap: 8px;
+      }
+
+      .con-cenos,
+      .t-rminos-y-condiciones,
+      .t-rminos-y-condiciones2 {
+        font-size: 11px;
+      }
+
+      .frame-22 {
+        gap: 6px;
+      }
+
+      .icons-8-tik-tok-100-1,
+      .icons-8-twitterx-100-1-1,
+      .icons-8-instagram-100-1,
+      .icons-8-facebook-nuevo-100-1 {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+}
+}

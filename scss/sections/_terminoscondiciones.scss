@@ -1,0 +1,117 @@
+// ==========================================================================
+// ESTILOS PARA LA PÁGINA DE TÉRMINOS Y CONDICIONES (CORRECTO)
+// ==========================================================================
+<!-- Fase 2: ERROR GRAVE: las variables no se definen aquí!, ya están definidas en los SCSS de variables-->
+
+// --- Variables (Ajusta si es necesario) ---
+$principal: #1c0538;
+$secundario: #5e3a8b;
+$principal-de-acento: #6f12e0;
+$texto-principal: #ffffff;
+
+// --- Fuentes ---
+$font-title: "GasoekOne-Regular", sans-serif;
+$font-body: "Inter-Regular", sans-serif;
+
+// -----------------------------------------------------------------------------
+// Componente Principal
+// -----------------------------------------------------------------------------
+.t-rminos-y-condiciones-pc {
+  // Contenedor principal
+  background: var(--principal, $principal);
+  padding: 0; // Eliminamos padding general del contenedor padre
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh; 
+  height: auto;      
+  position: relative;
+  overflow-x: hidden;
+
+  // Reset global
+  &, * {
+    box-sizing: border-box;
+  }
+
+  // ---------------------------------------------------------------------------
+  // CONTENIDO PRINCIPAL (El bloque de texto de los términos)
+  // ---------------------------------------------------------------------------
+  .condiciones-generales-de-venta {
+    background: var(--principal, $principal);
+    
+    // === TUS CAMBIOS SOLICITADOS ===
+    // 1. Margen arriba/abajo reducido (20px)
+    // 2. Margen izquierda/derecha aumentado (20% para centrar y dar aire)
+    padding: 20px 20%; 
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px; // Espacio entre título y texto
+    align-items: center; // Centra el bloque
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: auto; 
+    margin: 0 auto;
+
+    // Título "CONDICIONES GENERALES DE VENTA"
+    .t-tulo {
+      color: var(--texto-principal, $texto-principal);
+      text-align: center;
+      font-family: var(--h1-font-family, $font-title);
+      font-size: 32px; // Tamaño del título
+      font-weight: 400;
+      position: relative;
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    // Bloque de texto largo
+    .texto {
+      color: var(--texto-principal, $texto-principal);
+      
+      // === JUSTIFICACIÓN (NO TOCADA) ===
+      text-align: left; // Alineado a la izquierda como pediste
+      
+      font-family: var(--body-text-1-font-family, $font-body);
+      
+      // === LETRA MÁS PEQUEÑA ===
+      font-size: 16px; // Reducido de 25px a 16px (tamaño estándar legible)
+      
+      font-weight: 300; // Peso ligero
+      line-height: 1.6; // Espaciado entre líneas para lectura cómoda
+      position: relative;
+      align-self: stretch;
+      display: block;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Media Queries (Para que se vea bien en móvil)
+// -----------------------------------------------------------------------------
+@media (max-width: 1024px) {
+    .t-rminos-y-condiciones-pc .condiciones-generales-de-venta {
+        padding: 20px 10%; // Menos margen lateral en tablets
+    }
+}
+
+@media (max-width: 768px) {
+    .t-rminos-y-condiciones-pc {
+        .condiciones-generales-de-venta {
+            // En móvil reducimos el margen lateral casi al mínimo
+            padding: 20px 20px; 
+            
+            .t-tulo {
+                font-size: 24px; // Título más pequeño
+            }
+            .texto {
+                font-size: 14px; // Texto un poco más pequeño en móvil
+            }
+        }
+    }
+}

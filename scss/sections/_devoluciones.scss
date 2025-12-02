@@ -1,0 +1,317 @@
+.devoluciones-pc,
+.devoluciones-pc * {
+  box-sizing: border-box;
+}
+
+
+
+.devoluciones-pc {
+  background: var(--principal, #1c0538);
+  padding: 47px 0px 47px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  align-items: center;
+  justify-content: flex-start;
+  height: 995px;
+  position: relative;
+  overflow: hidden;
+
+  .lista-devoluciones {
+    padding: 0px 102px 193px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+
+    .frame-9 {
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex-shrink: 0;
+      width: 1718px;
+      height: auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .frame-25 {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+      align-self: stretch;
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+
+      .frame-26 {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        align-self: stretch;
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .frame-27 {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        align-self: stretch;
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .devoluci-n {
+        color: #ffffff;
+        text-align: center;
+        font-family: var(--h1-font-family, "GasoekOne-Regular", sans-serif);
+        font-size: var(--h1-font-size, 32px);
+        font-weight: var(--h1-font-weight, 400);
+        position: relative;
+        flex: 1;
+        height: 123px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .frame-28 {
+        padding: 0px 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        align-self: stretch;
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .subtotal-x-productos {
+        color: #ffffff;
+        text-align: left;
+        font-family: var(--body-text-1-font-family, "Inter-Regular", sans-serif);
+        font-size: var(--body-text-1-font-size, 25px);
+        font-weight: var(--body-text-1-font-weight, 400);
+        position: relative;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 249px;
+        margin: 0;
+      }
+
+      .frame-29 {
+        padding: 0px 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        align-self: stretch;
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      ._99 {
+        color: #ffffff;
+        text-align: right;
+        font-family: var(--body-text-1-font-family, "Inter-Regular", sans-serif);
+        font-size: var(--body-text-1-font-size, 25px);
+        font-weight: var(--body-text-1-font-weight, 400);
+        position: relative;
+        width: 379px;
+        height: 73px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+      }
+
+      .coste-de-recogida-a-domicilio {
+        color: #ffffff;
+        text-align: left;
+        font-family: var(--body-text-1-font-family, "Inter-Regular", sans-serif);
+        font-size: var(--body-text-1-font-size, 25px);
+        font-weight: var(--body-text-1-font-weight, 400);
+        position: relative;
+        flex: 1;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 215px;
+        margin: 0;
+        padding: 0;
+      }
+
+      ._2-99 {
+        color: #ffffff;
+        text-align: right;
+        font-family: var(--body-text-1-font-family, "Inter-Regular", sans-serif);
+        font-size: var(--body-text-1-font-size, 25px);
+        font-weight: var(--body-text-1-font-weight, 400);
+        position: relative;
+        width: 379px;
+        height: 73px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .frame-30 {
+        padding: 5px 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        align-self: stretch;
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .texto-importe {
+        color: #ffffff;
+        text-align: left;
+        font-family: var(--body-text-1-font-family, "Inter-Regular", sans-serif);
+        font-size: var(--body-text-1-font-size, 25px);
+        font-weight: var(--body-text-1-font-weight, 400);
+        position: relative;
+        flex: 1;
+        height: 108px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .frame-31 {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        align-self: stretch;
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .div {
+        color: #ffffff;
+        text-align: center;
+        font-family: var(--h1-font-family, "GasoekOne-Regular", sans-serif);
+        font-size: var(--h1-font-size, 25px);
+        font-weight: var(--h1-font-weight, 400);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .frame-33 {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        align-self: stretch;
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .total-de-la-devoluci-n {
+        color: #ffffff;
+        text-align: left;
+        font-family: var(--h1-font-family, "GasoekOne-Regular", sans-serif);
+        font-size: var(--h1-font-size, 25px);
+        font-weight: var(--h1-font-weight, 400);
+        position: relative;
+        flex: 1;
+        height: 108px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 249px;
+      }
+
+      ._992 {
+        color: #ffffff;
+        text-align: right;
+        font-family: var(--h1-font-family, "GasoekOne-Regular", sans-serif);
+        font-size: var(--h1-font-size, 25px);
+        font-weight: var(--h1-font-weight, 400);
+        position: relative;
+        width: 388px;
+        height: 73px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .frame-7 {
+        background: var(--principal-de-acento, #6f12e0);
+        border-radius: 15px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 300px;
+        height: 82px;
+        position: relative;
+        overflow: hidden;
+      }
+    
+      .frame-7:hover{
+        background: var(--secundario, #b200ff);
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .confirmar-devoluci-n {
+        color: var(--texto-principal, #ffffff);
+        text-align: center;
+        font-family: var(--h1-font-family, "GasoekOne-Regular", sans-serif);
+        font-size: var(--h1-font-size, 25px);
+        font-weight: var(--h1-font-weight, 400);
+        position: relative;
+        flex: 1;
+        height: 134px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

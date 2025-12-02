@@ -1,0 +1,275 @@
+<!-- Fase 2: ERROR GRAVE: las variables no se definen aquí!, ya están definidas en los SCSS de variables-->
+
+// --- Variables ---
+$principal: #1c0538;
+$texto-principal: #ffffff;
+$principal-de-acento: #6f12e0;
+$secundario: #5e3a8b;
+$input-bg: #ffffff;
+
+$h1-font-family: "GasoekOne-Regular", sans-serif; // Usamos esto para títulos grandes
+$h2-font-family: "GasoekOne-Regular", sans-serif;
+$body-font-family: "Inter", sans-serif;
+
+$h2-font-size: 24px;
+$h2-font-weight: 400;
+
+// -----------------------------------------------------------------------------
+// Componente Principal
+// -----------------------------------------------------------------------------
+.login-pc {
+  &, * {
+    box-sizing: border-box;
+  }
+
+  // Contenedor principal para PC (Centrado en pantalla)
+  background: $principal;
+  min-height: 100vh;
+  padding: 40px 0; // Más pequeño en PC
+  display: flex;
+  flex-direction: column;
+  gap: 30px; // Reducido el espacio
+  align-items: center;
+  justify-content: center; // Centrado verticalmente
+  position: relative;
+  overflow: auto; // Permite scroll si el contenido es demasiado largo
+}
+
+// -----------------------------------------------------------------------------
+// Logo (Frame 11)
+// -----------------------------------------------------------------------------
+.frame-11 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 300px; // El logo ocupa un tamaño razonable
+  height: auto;
+  position: relative;
+  
+  .logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Formulario de Registro/Login
+// -----------------------------------------------------------------------------
+.registro {
+  // Ajustamos el padding para centrar mejor
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: none; // No ocupa espacio automáticamente
+
+  // Frame 9 (El Contenedor del Formulario)
+  .frame-9 {
+    // El formulario será el elemento principal, con un ancho máximo estricto
+    background: $secundario; // Fondo para el formulario
+    border-radius: 12px;
+    padding: 30px; // Padding interno
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 450px; // MUCHÍSIMO más pequeño
+    width: 90%; // Ocupa el 90% del contenedor si es más pequeño que max-width
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  // Título/Mensaje
+  .frame-20 {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    
+    .bienvenido-a-kairos {
+      color: $texto-principal;
+      text-align: center;
+      font-family: $h1-font-family;
+      font-size: 30px; // Tamaño adecuado para un título de formulario
+      font-weight: 400;
+      line-height: 1.2;
+    }
+  }
+
+  // Contenedor de Inputs y Botón
+  .frame-12 {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; // Espacio entre los campos
+    align-items: flex-start;
+  }
+
+  // Grupo de Campo (Label + Input)
+  .frame-18 {
+    display: flex;
+    flex-direction: column; // Apilamos label e input
+    gap: 8px;
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    .label-field { // Estilo para el label "Email:" o "Contraseña:"
+      color: $texto-principal;
+      font-family: $body-font-family;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: left;
+      width: 100%;
+      height: auto;
+    }
+    
+    // Campo de Entrada (Input)
+    .frame-17 {
+      // Estilos del input: Se aplica a <input>
+      background: $input-bg;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      padding: 12px 15px;
+      width: 100%;
+      height: 45px; // Altura fija
+      font-family: $body-font-family;
+      font-size: 16px;
+      color: $principal; // Texto dentro del input
+      transition: border-color 0.3s ease;
+      
+      &:focus {
+          border-color: $principal-de-acento;
+          outline: none;
+      }
+    }
+  } 
+
+  // Botón Log In
+  .frame-24 {
+    padding: 10px 0; // Espacio alrededor del botón
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex: none;
+
+    .frame-23 {
+      // El botón real (el frame interior)
+      background: $principal-de-acento;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      
+      &:hover {
+          background: darken($principal-de-acento, 10%);
+      }
+
+      .log-in {
+        color: $texto-principal;
+        text-align: center;
+        font-family: $h2-font-family;
+        font-size: 20px;
+        font-weight: 400;
+      }
+    }
+  } 
+  
+  // Enlace de registro (abajo)
+  .frame-202 {
+    width: 100%;
+    height: auto;
+    padding-top: 5px; // Pequeño espacio extra
+
+    .a-n-no-tienes-cuenta-registrate-aqu {
+      color: $texto-principal;
+      text-align: center;
+      font-family: $body-font-family;
+      font-size: 14px; // Más pequeño para un enlace auxiliar
+      font-weight: 400;
+
+      a {
+          color: $texto-principal; // Enlace en color de acento
+          text-decoration: none;
+          transition: color 0.3s ease;
+          &:hover {
+              color: lighten($principal-de-acento, 15%);
+              text-decoration: underline;
+          }
+      }
+    }
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Media Queries para Móviles
+// -----------------------------------------------------------------------------
+@media (max-width: 768px) {
+  .login-pc {
+    padding: 20px;
+    justify-content: flex-start; // Alineamos arriba en móvil
+    gap: 30px; 
+  }
+
+  .frame-11 {
+    max-width: 250px; // Un poco más pequeño
+  }
+  
+  .registro {
+    padding: 0; // Eliminamos padding extra
+
+    .frame-9 {
+      max-width: 90%; // Ocupa la mayor parte de la pantalla
+      padding: 25px;
+      gap: 15px; // Menos espacio entre secciones
+    }
+
+    .frame-20 {
+      .bienvenido-a-kairos {
+        font-size: 24px; // Reducimos el título
+      }
+    }
+
+    .frame-12 {
+      gap: 12px;
+    }
+
+    .frame-18 {
+        .label-field, .frame-17 {
+            font-size: 15px;
+        }
+        .frame-17 {
+            height: 40px; // Reducimos un poco la altura del input
+            padding: 10px 12px;
+        }
+    }
+
+    .frame-24 {
+        .frame-23 {
+            height: 45px;
+        }
+        .log-in {
+            font-size: 18px;
+        }
+    }
+
+    .frame-202 {
+        .a-n-no-tienes-cuenta-registrate-aqu {
+            font-size: 13px;
+        }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+// 
+// Styles
+// 
+
+// Import custom variables and override default Bootstrap variables
+@import  "./variables.scss";
+
+// Import Bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+$bootstrap-icons-font-src: url("../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2") format("woff2"), url("../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff") format("woff");
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
+
+// Import custom styles
+@import "./global.scss";
+
+// Sections - Kairos
+@import "./sections/carrito.scss";
+@import "./sections/conocenos.scss";
+@import "./sections/navigation.scss";
+@import "./sections/login.scss";
+@import "./sections/registro.scss";
+@import "./sections/terminoscondiciones.scss";
+@import "./sections/zonadepago.scss";
+@import "./sections/footer.scss";
+@import "./sections/soporte.scss";
+@import "./sections/trabaja_con_nosotros.scss";
+@import "./sections/devoluciones.scss";
+@import "./sections/wishlist.scss";
+@import "./sections/recibos.scss";
+@import "./sections/plataformas.scss";
+@import "./sections/detalles.scss";
+
+
+// Components - Kairos
+@import "components/product-card";
+@import "components/product-grid";

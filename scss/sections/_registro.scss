@@ -1,0 +1,277 @@
+<!-- Fase 2: ERROR GRAVE: las variables no se definen aquí!, ya están definidas en los SCSS de variables-->
+
+// --- Variables ---
+$principal: #1c0538;
+$texto-principal: #ffffff;
+$principal-de-acento: #6f12e0;
+$secundario: #5e3a8b;
+$input-bg: #ffffff;
+$cancel-color: #555555; // Gris oscuro para el botón Cancelar
+
+$h1-font-family: "GasoekOne-Regular", sans-serif;
+$h2-font-family: "GasoekOne-Regular", sans-serif;
+$body-font-family: "Inter", sans-serif;
+
+$font-size-h1: 32px;
+$font-size-h2: 24px;
+$font-weight-base: 400;
+
+// -----------------------------------------------------------------------------
+// Componente Principal
+// -----------------------------------------------------------------------------
+.registro-pc {
+  &, * {
+    box-sizing: border-box;
+  }
+
+  // Contenedor principal (Centrado en pantalla)
+  background: $principal;
+  min-height: 100vh;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center; // Centrado verticalmente
+  position: relative;
+  overflow: auto; 
+}
+
+// -----------------------------------------------------------------------------
+// Logo (Frame 11)
+// -----------------------------------------------------------------------------
+.frame-11 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 300px; 
+  height: auto;
+  
+  .logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Formulario de Registro
+// -----------------------------------------------------------------------------
+.registro {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: none;
+
+  // Frame 9 (El Contenedor del Formulario)
+  .frame-9 {
+    background: $secundario;
+    border-radius: 12px;
+    padding: 30px; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px; // Espacio entre secciones
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 500px; // Un poco más ancho que el login por tener más campos
+    width: 90%; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  // Título/Mensaje
+  .frame-20 {
+    width: 100%;
+    padding: 10px 0;
+    
+    .a-n-no-tienes-cuenta-registate {
+      color: $texto-principal;
+      text-align: center;
+      font-family: $h1-font-family;
+      font-size: 30px; 
+      font-weight: $font-weight-base;
+      line-height: 1.2;
+    }
+  }
+
+  // Contenedor de Inputs y Botones
+  .frame-12 {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; // Espacio entre los campos
+    align-items: flex-start;
+
+    // Estilo para el contenedor de cada input (Nombre, Apellidos, Email, Contraseña)
+    .frame-13, .frame-25, .frame-26, .frame-27 {
+      display: flex;
+      flex-direction: column; 
+      gap: 8px;
+      width: 100%;
+      height: auto;
+      position: relative;
+
+      .label-field { // Estilo para el label
+        color: $texto-principal;
+        font-family: $body-font-family;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: left;
+        width: 100%;
+      }
+      
+      // Campo de Entrada (Input)
+      .frame-17 {
+        background: $input-bg;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        padding: 12px 15px;
+        width: 100%;
+        height: 45px; 
+        font-family: $body-font-family;
+        font-size: 16px;
+        color: $principal; 
+        transition: border-color 0.3s ease;
+        
+        &:focus {
+            border-color: $principal-de-acento;
+            outline: none;
+        }
+      }
+    }
+  } 
+
+  // Botones Aceptar/Cancelar
+  .frame-24 {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 15px; // Espacio entre los dos botones
+    align-items: center;
+    justify-content: space-between; // Distribuye los botones
+    width: 100%;
+    flex: none;
+
+    // Botón Aceptar (Submit)
+    .frame-23 {
+      background: $principal-de-acento;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1; // Ambos botones ocupan el 50%
+      height: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      
+      &:hover {
+          background: darken($principal-de-acento, 10%);
+      }
+
+      .aceptar {
+        color: $texto-principal;
+        text-align: center;
+        font-family: $h2-font-family;
+        font-size: 20px;
+        font-weight: $font-weight-base;
+      }
+    }
+    
+    // Botón Cancelar (Enlace)
+    .frame-22 {
+      // Usado como <a> en el HTML para regresar
+      background: $principal-de-acento; 
+      border-radius: 30px;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1; 
+      height: 50px;
+      cursor: pointer;
+      text-decoration: none; // Quita el subrayado del enlace
+      transition: background-color 0.3s ease;
+
+      &:hover {
+          background: darken($principal-de-acento, 10%);
+      }
+
+      .cancelar {
+        color: $texto-principal;
+        text-align: center;
+        font-family: $h2-font-family;
+        font-size: 20px;
+        font-weight: $font-weight-base;
+      }
+    }
+  } 
+}
+
+
+// -----------------------------------------------------------------------------
+// Media Queries para Móviles
+// -----------------------------------------------------------------------------
+@media (max-width: 768px) {
+  .registro-pc {
+    padding: 20px;
+    justify-content: flex-start;
+    gap: 20px; 
+  }
+
+  .frame-11 {
+    max-width: 200px;
+  }
+  
+  .registro {
+    padding: 0;
+
+    .frame-9 {
+      max-width: 95%; 
+      padding: 20px;
+      gap: 15px;
+    }
+
+    .frame-20 {
+      .a-n-no-tienes-cuenta-registate {
+        font-size: 24px;
+      }
+    }
+
+    .frame-12 {
+      gap: 10px; // Reducimos el espacio entre campos
+    }
+
+    .frame-13, .frame-25, .frame-26, .frame-27 {
+        gap: 6px; // Reducimos espacio entre label e input
+        .label-field, .frame-17 {
+            font-size: 14px;
+        }
+        .frame-17 {
+            height: 40px; 
+            padding: 10px 12px;
+        }
+    }
+    
+    // Botones en móvil
+    .frame-24 {
+        flex-direction: column; // CRUCIAL: Apilamos los botones verticalmente
+        gap: 10px; // Espacio entre Aceptar y Cancelar apilados
+
+        .frame-23, .frame-22 {
+            width: 100%; // Ocupan todo el ancho
+            flex: none; // Desactivamos el flex: 1 para apilarlos
+            height: 45px;
+            .aceptar, .cancelar {
+                font-size: 18px;
+            }
+        }
+    }
+  }
+}
