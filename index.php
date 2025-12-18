@@ -10,35 +10,17 @@
   <header>
 	<?php include("includes/navigation.php");?>
   <?php include("includes/carrito.php"); ?>
-
+  <?php include("includes/products.php"); ?>
   </header>
 
   <main>
     <div class="products">
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-	    <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-	    <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
-      <?php include("includes/product-card.php");?>
+      <?php
+      for ($i = 0; $i < count($productos); $i++) {
+          $producto = $productos[$i];
+          include("includes/product-card.php");
+      }
+      ?>
     </div>
   </main>
 

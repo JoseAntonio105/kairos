@@ -1,14 +1,14 @@
 // ==========================================================================
 // ESTILOS COMPLETOS DEL CARRITO (ESTRUCTURA + DISEÑO VISUAL)
 // ==========================================================================
-<!-- Fase 2: ERROR GRAVE: las variables no se definen aquí!, ya están definidas en los SCSS de variables-->
+//<!-- Fase 2: ERROR GRAVE: las variables no se definen aquí!, ya están definidas en los SCSS de variables-->
 // --- Variables (Asegúrate de que coincidan con las tuyas) ---
 $principal: #1c0538;            // Fondo oscuro
 $secundario: #5e3a8b;           // Fondo de elementos/tarjetas
 $principal-de-acento: #6f12e0;  // Botones y destacados
 $texto-principal: #ffffff;      // Texto blanco
 $font-title: "GasoekOne-Regular", sans-serif;
-$font-body: "Inter", sans-serif;
+$font-body: "Inter", sans-serif; 
 
 // -------------------------------------------------------------------
 // 1. ESTRUCTURA DEL MODAL (El fondo oscuro y el panel lateral)
