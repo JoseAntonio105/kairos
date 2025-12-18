@@ -14,17 +14,7 @@
         <div class="qu-enes-somos">
             <div class="t-tulo">¿CÓMO FUNCIONA NUESTRO SOPORTE?</div>
             <div class="texto">
-            Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos
-            de texto. Lorem Ipsum ha sido el texto de relleno estándar de las
-            industrias desde el año 1500, cuando un impresor (N. del T. persona que se
-            dedica a la imprenta) desconocido usó una galería de textos y los mezcló
-            de tal manera que logró hacer un libro de textos especimen. No sólo
-            sobrevivió 500 años, sino que tambien ingresó como texto de relleno en
-            documentos electrónicos, quedando esencialmente igual al original. Fue
-            popularizado en los 60s con la creación de las hojas &quot;Letraset&quot;,
-            las cuales contenian pasajes de Lorem Ipsum, y más recientemente con
-            software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye
-            versiones de Lorem Ipsum.
+            Nuestro servicio de soporte está diseñado para ayudarte en cada fase de tu experiencia en la plataforma. Desde la gestión de pedidos y pagos hasta la seguridad de tus datos, ponemos a tu disposición información clara y asistencia para resolver cualquier incidencia de forma rápida y eficaz. Nuestro objetivo es que puedas comprar y utilizar nuestros servicios con total tranquilidad.
             </div>
         </div>
         <div class="opciones">
@@ -36,9 +26,7 @@
                 <br />
                 </div>
                 <div class="texto-descriptivo">
-                Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-                archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de
-                las industrias desde el año 1500.
+                En el apartado de pedidos puedes consultar el estado de tus compras, revisar productos adquiridos y resolver incidencias relacionadas con la confirmación, acceso o entrega de contenidos digitales. Si detectas cualquier error en un pedido, nuestro equipo de soporte te ayudará a identificarlo y gestionarlo correctamente.
                 </div>
             </div>
             </div>
@@ -50,9 +38,7 @@
                 <br />
                 </div>
                 <div class="texto-descriptivo">
-                Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-                archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de
-                las industrias desde el año 1500.
+                Ofrecemos métodos de pago seguros y verificados para garantizar transacciones fiables. Si tienes dudas sobre cargos, errores durante el proceso de pago o problemas con un método concreto, el soporte te orientará para solucionar la incidencia y completar tu compra sin inconvenientes.
                 </div>
             </div>
             </div>
@@ -64,9 +50,7 @@
                 <br />
                 </div>
                 <div class="texto-descriptivo">
-                Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-                archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de
-                las industrias desde el año 1500.
+                La seguridad de tu cuenta y de tus datos personales es una prioridad. En esta sección encontrarás información sobre protección de datos, acceso seguro y prevención de usos no autorizados. Ante cualquier sospecha de actividad anómala, el equipo de soporte podrá asesorarte sobre las medidas a seguir.
                 </div>
             </div>
             </div>

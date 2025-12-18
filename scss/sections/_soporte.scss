@@ -11,8 +11,9 @@
 
 .soporte{
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
+
 
 .soporte-pc {
   background: var(--principal, #1c0538);
