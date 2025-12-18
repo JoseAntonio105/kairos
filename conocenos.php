@@ -18,7 +18,7 @@
     </div>
   </div>
   <div class="historia">
-    <img class="imagen" src="/assets/img/imagen-placeholder.png" />
+    <img class="imagen" src="/assets/img/illustrations/historia.jpg" />
     <div class="campo-de-texto">
       <div class="t-tulo1">HISTORIA</div>
       <div class="texto">
@@ -28,7 +28,7 @@
     </div>
   </div>
   <div class="obtener-clave">
-    <img class="imagen" src="/assets/img/imagen-placeholder.png" />
+    <img class="imagen" src="/assets/img/illustrations/claves.jpeg" />
     <div class="campo-de-texto">
       <div class="t-tulo1">¿DE DÓNDE OBTENEMOS NUESTRAS CLAVES?</div>
       <div class="texto">

@@ -1,31 +1,73 @@
-<!-- Fase 2: ERROR GRAVE: no usáis boostrap, componentes como navbar, modales, botones y clases auxiliares de todo tipo!-->
-
-<?php include("includes/a_config.php");?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <?php include("includes/head-tag-contents.php");?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataformas</title>
+    <?php include_once 'includes/head-tag-contents.php'?>
 </head>
+
+
 <body>
-  <header>
-	<?php include("includes/navigation.php");?>
-  <?php include("includes/carrito.php"); ?>
-  <?php include("includes/products.php"); ?>
-  </header>
 
-  <main>
-    <div class="products">
-        <?php
-            for ($i = 0; $i < count($productos); $i++) {
-                    $producto = $productos[$i];
-                    include("includes/product-card.php");
-                }
-        ?>
+<?php include_once 'includes/navigation.php' ?>
+<?php include_once 'includes/carrito.php' ?>
+
+<div class="plataformas-pc">
+
+    <div class="titulo-plataformas">PLATAFORMAS</div>
+
+    <div class="grid-plataformas">
+
+        <a href="playstation.php" class="product-card plataforma">
+            <div class="product-card-inner">
+                <div class="product-card-media">
+                    <img class="product-card-cover" src="assets/img/playstation.png" alt="PlayStation">
+                </div>
+                <div class="product-card-bottom">
+                    <div class="product-card-price">PLAYSTATION</div>
+                </div>
+            </div>
+        </a>
+
+        <a href="nintendo.php" class="product-card plataforma">
+            <div class="product-card-inner">
+                <div class="product-card-media">
+                    <img class="product-card-cover" src="assets/img/nintendo.png" alt="Nintendo">
+                </div>
+                <div class="product-card-bottom">
+                    <div class="product-card-price">NINTENDO</div>
+                </div>
+            </div>
+        </a>
+
+        <a href="xbox.php" class="product-card plataforma">
+            <div class="product-card-inner">
+                <div class="product-card-media">
+                    <img class="product-card-cover" src="assets/img/xbox.png" alt="Xbox">
+                </div>
+                <div class="product-card-bottom">
+                    <div class="product-card-price">XBOX</div>
+                </div>
+            </div>
+        </a>
+
+        <a href="steam.php" class="product-card plataforma">
+            <div class="product-card-inner">
+                <div class="product-card-media">
+                    <img class="product-card-cover" src="assets/img/steam.png" alt="Steam">
+                </div>
+                <div class="product-card-bottom">
+                    <div class="product-card-price">STEAM</div>
+                </div>
+            </div>
+        </a>
+
     </div>
-  </main>
 
-  <footer><?php include("includes/footer.php");?></footer>
-  <script src="js/scripts.js"></script>
+</div>
 
+<?php include_once 'includes/footer.php'?>
+<script src="js/scripts.js"></script>
 </body>
 </html>
