@@ -14,7 +14,12 @@ if (isset($producto["platform_icon"])) $platformIcon = $producto["platform_icon"
 if (isset($producto["platform_alt"])) $platformAlt = $producto["platform_alt"];
 if (isset($producto["discount"])) $discount = $producto["discount"];
 if (isset($producto["price"])) $price = $producto["price"];
-if (isset($producto["details_url"])) $detailsUrl = $producto["details_url"];
+
+$id = 0;
+if (isset($producto["id"])) $id = $producto["id"];
+
+$detailsUrl = "detalles.php?id=" . $id;
+
 if (isset($producto["add_url"])) $addUrl = $producto["add_url"];
 ?>
 

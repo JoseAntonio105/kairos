@@ -1,335 +1,38 @@
-<?php include("includes/a_config.php"); ?>
+<!-- Fase 2: ERROR GRAVE: no usáis boostrap, componentes como navbar, modales, botones y clases auxiliares de todo tipo!-->
+
+<?php include("includes/a_config.php");?>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <?php include("includes/head-tag-contents.php"); ?>
-    <title>Xbox - Kairos</title>
+  <?php include("includes/head-tag-contents.php");?>
 </head>
-
-
 <body>
-
-    <header>
-        <?php include("includes/navigation.php"); ?>
-        <?php include("includes/carrito.php"); ?>
-    </header>
-
-    <main>
-
-        <div class="products">
-            <div class="product-card">
-                <div class="product-card-inner">
-
-                    <a href="detalles.php" class="product-card-media">                              
-                        <img class="product-card-cover" src="assets/img/xbox.png" alt="Xbox">
-                    </a>
-
-                    <div class="product-card-bottom">
-                        <div class="product-card-price">
-                            39.99€
-                        </div>
-                        <a class="product-card-button" href="">
-                            AÑADIR AL CARRITO
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card-inner">
-
-                    <a href="detalles.php" class="product-card-media">                              
-                        <img class="product-card-cover" src="assets/img/xbox.png" alt="Xbox">
-                    </a>
-
-                    <div class="product-card-bottom">
-                        <div class="product-card-price">
-                            39.99€
-                        </div>
-                        <a class="product-card-button" href="">
-                            AÑADIR AL CARRITO
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card-inner">
-
-                    <a href="detalles.php" class="product-card-media">                              
-                        <img class="product-card-cover" src="assets/img/xbox.png" alt="Xbox">
-                    </a>
-
-                    <div class="product-card-bottom">
-                        <div class="product-card-price">
-                            39.99€
-                        </div>
-                        <a class="product-card-button" href="">
-                            AÑADIR AL CARRITO
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card-inner">
-
-                    <a href="detalles.php" class="product-card-media">                              
-                        <img class="product-card-cover" src="assets/img/xbox.png" alt="Xbox">
-                    </a>
-
-                    <div class="product-card-bottom">
-                        <div class="product-card-price">
-                            39.99€
-                        </div>
-                        <a class="product-card-button" href="">
-                            AÑADIR AL CARRITO
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card-inner">
-
-                    <a href="detalles.php" class="product-card-media">                              
-                        <img class="product-card-cover" src="assets/img/xbox.png" alt="Xbox">
-                    </a>
-
-                    <div class="product-card-bottom">
-                        <div class="product-card-price">
-                            39.99€
-                        </div>
-                        <a class="product-card-button" href="">
-                            AÑADIR AL CARRITO
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card-inner">
-
-                    <a href="detalles.php" class="product-card-media">                              
-                        <img class="product-card-cover" src="assets/img/xbox.png" alt="Xbox">
-                    </a>
-
-                    <div class="product-card-bottom">
-                        <div class="product-card-price">
-                            39.99€
-                        </div>
-                        <a class="product-card-button" href="">
-                            AÑADIR AL CARRITO
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card-inner">
-
-                    <a href="detalles.php" class="product-card-media">                              
-                        <img class="product-card-cover" src="assets/img/xbox.png" alt="Xbox">
-                    </a>
-
-                    <div class="product-card-bottom">
-                        <div class="product-card-price">
-                            39.99€
-                        </div>
-                        <a class="product-card-button" href="">
-                            AÑADIR AL CARRITO
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card-inner">
-
-                    <a href="detalles.php" class="product-card-media">                              
-                        <img class="product-card-cover" src="assets/img/xbox.png" alt="Xbox">
-                    </a>
-
-                    <div class="product-card-bottom">
-                        <div class="product-card-price">
-                            39.99€
-                        </div>
-                        <a class="product-card-button" href="">
-                            AÑADIR AL CARRITO
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card-inner">
-
-                    <a href="detalles.php" class="product-card-media">                              
-                        <img class="product-card-cover" src="assets/img/xbox.png" alt="Xbox">
-                    </a>
-
-                    <div class="product-card-bottom">
-                        <div class="product-card-price">
-                            39.99€
-                        </div>
-                        <a class="product-card-button" href="">
-                            AÑADIR AL CARRITO
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card-inner">
-
-                    <a href="detalles.php" class="product-card-media">                              
-                        <img class="product-card-cover" src="assets/img/xbox.png" alt="Xbox">
-                    </a>
-
-                    <div class="product-card-bottom">
-                        <div class="product-card-price">
-                            39.99€
-                        </div>
-                        <a class="product-card-button" href="">
-                            AÑADIR AL CARRITO
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card-inner">
-
-                    <a href="detalles.php" class="product-card-media">                              
-                        <img class="product-card-cover" src="assets/img/xbox.png" alt="Xbox">
-                    </a>
-
-                    <div class="product-card-bottom">
-                        <div class="product-card-price">
-                            39.99€
-                        </div>
-                        <a class="product-card-button" href="">
-                            AÑADIR AL CARRITO
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card-inner">
-
-                    <a href="detalles.php" class="product-card-media">                              
-                        <img class="product-card-cover" src="assets/img/xbox.png" alt="Xbox">
-                    </a>
-
-                    <div class="product-card-bottom">
-                        <div class="product-card-price">
-                            39.99€
-                        </div>
-                        <a class="product-card-button" href="">
-                            AÑADIR AL CARRITO
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card-inner">
-
-                    <a href="detalles.php" class="product-card-media">                              
-                        <img class="product-card-cover" src="assets/img/xbox.png" alt="Xbox">
-                    </a>
-
-                    <div class="product-card-bottom">
-                        <div class="product-card-price">
-                            39.99€
-                        </div>
-                        <a class="product-card-button" href="">
-                            AÑADIR AL CARRITO
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card-inner">
-
-                    <a href="detalles.php" class="product-card-media">                              
-                        <img class="product-card-cover" src="assets/img/xbox.png" alt="Xbox">
-                    </a>
-
-                    <div class="product-card-bottom">
-                        <div class="product-card-price">
-                            39.99€
-                        </div>
-                        <a class="product-card-button" href="">
-                            AÑADIR AL CARRITO
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card-inner">
-
-                    <a href="detalles.php" class="product-card-media">                              
-                        <img class="product-card-cover" src="assets/img/xbox.png" alt="Xbox">
-                    </a>
-
-                    <div class="product-card-bottom">
-                        <div class="product-card-price">
-                            39.99€
-                        </div>
-                        <a class="product-card-button" href="">
-                            AÑADIR AL CARRITO
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-card-inner">
-
-                    <a href="detalles.php" class="product-card-media">                              
-                        <img class="product-card-cover" src="assets/img/xbox.png" alt="Xbox">
-                    </a>
-
-                    <div class="product-card-bottom">
-                        <div class="product-card-price">
-                            39.99€
-                        </div>
-                        <a class="product-card-button" href="">
-                            AÑADIR AL CARRITO
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            
-
-        </div>
-    </main>
-
-    <footer><?php include("includes/footer.php"); ?></footer>
-    <script src="js/scripts.js"></script>
+  <header>
+	<?php include("includes/navigation.php");?>
+  <?php include("includes/carrito.php"); ?>
+  <?php include("includes/products.php"); ?>
+  </header>
+
+  <main>
+    <div class="products">
+        <?php
+            for ($i = 0; $i < count($productos); $i++) {
+
+                if (
+                    isset($productos[$i]["platform"]) &&
+                    $productos[$i]["platform"] === "xbox"
+                ) {
+                    $producto = $productos[$i];
+                    include("includes/product-card.php");
+                }
+
+            }
+        ?>
+    </div>
+  </main>
+
+  <footer><?php include("includes/footer.php");?></footer>
+  <script src="js/scripts.js"></script>
 
 </body>
-
 </html>
