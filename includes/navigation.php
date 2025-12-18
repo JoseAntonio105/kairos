@@ -23,6 +23,7 @@
                     <li><a class="dropdown-item" href="playstation.php">PlayStation</a></li>
                     <li><a class="dropdown-item" href="xbox.php">Xbox</a></li>
                     <li><a class="dropdown-item" href="nintendo.php">Nintendo</a></li>
+                    <li><a class="dropdown-item" href="minijuego-konva/index.html">Juega a Konva Commerce Game!</a></li>
                 </ul>
             </div>
 
