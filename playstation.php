@@ -14,6 +14,14 @@
   </header>
 
   <main>
+    <div class="hero-video">
+      <iframe
+        src="https://www.youtube.com/embed/8a3Aga7JJgE?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=8a3Aga7JJgE"
+        frameborder="0"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
     <div class="products">
         <?php
             for ($i = 0; $i < count($productos); $i++) {
