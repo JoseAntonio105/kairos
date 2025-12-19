@@ -33,8 +33,8 @@
         img {
             width: 100%;
             max-width: 480px;
-            border-radius: $border-radius-lg;
-            box-shadow: 0 4px 20px rgba($texto_claro, 0.15);
+           // border-radius: $border-radius-sm;
+            //box-shadow: 0 4px 20px rgba($texto_claro, 0.15);
         }
     }
 
@@ -63,9 +63,6 @@
             gap: 0.4rem;
             font-size: 0.95rem;
 
-            strong {
-                color: lighten($resalte, 25%);
-            }
         }
 
         .detalles-descripcion {
@@ -82,7 +79,7 @@
 
         .detalles-boton {
             background-color: $resalte;
-            border-radius: $border-radius-lg;
+            //border-radius: $border-radius-lg;
             padding: 0.8rem 0;
             width: 100%;
             text-align: center;
@@ -97,9 +94,9 @@
             letter-spacing: 1px;
 
             &:hover {
-                background-color: lighten($resalte, 10%);
+                //background-color: lighten($resalte, 10%);
                 transform: translateY(-2px);
-                box-shadow: 0 4px 12px rgba($texto_claro, 0.25);
+                //box-shadow: 0 4px 12px rgba($texto_claro, 0.25);
             }
         }
     }
@@ -131,17 +128,17 @@
         .requs-bloque {
             background: $secundario;
             padding: 1.2rem 1.5rem;
-            border-radius: $border-radius-lg;
+           // border-radius: $border-radius-lg;
             width: 100%;
             max-width: 450px;
-            box-shadow: 0 4px 16px rgba($texto_claro, 0.15);
+            //box-shadow: 0 4px 16px rgba($texto_claro, 0.15);
 
             .requs-sub {
                 font-family: $headings-font-family;
                 font-weight: $headings-font-weight;
                 font-size: 1.25rem;
                 margin-bottom: 0.7rem;
-                color: $texto_claro;
+                color: $resalte;
                 text-transform: uppercase;
             }
 
@@ -153,9 +150,6 @@
                 li {
                     margin-bottom: 6px;
 
-                    strong {
-                        color: lighten($resalte, 20%);
-                    }
                 }
             }
         }
