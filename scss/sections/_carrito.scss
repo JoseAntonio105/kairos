@@ -166,9 +166,7 @@ $font-body: "Inter", sans-serif;
             }
             
             ._99 {
-                color: lighten($principal-de-acento, 20%); // Precio destacado
                 font-family: $font-body;
-                font-weight: 700;
                 font-size: 15px;
             }
         }
@@ -199,7 +197,6 @@ $font-body: "Inter", sans-serif;
     display: flex;
     align-items: center;
     gap: 8px;
-    background-color: rgba(0,0,0, 0.2); // Fondo oscuro para el control
     padding: 4px 8px;
     border-radius: 8px;
     
@@ -207,7 +204,6 @@ $font-body: "Inter", sans-serif;
         width: 20px;
         text-align: center;
         color: $texto-principal;
-        font-weight: 600;
         font-size: 16px;
     }
 

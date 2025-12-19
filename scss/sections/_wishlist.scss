@@ -53,7 +53,6 @@
       .tarjeta,
       .tarjeta2 {
         background: var(--morado-secundario, #5e3a8b);
-        border-radius: 10px;
         padding: 20px;
         display: flex;
         flex-direction: row;
@@ -90,7 +89,6 @@
             height: 100px;
             position: relative;
             object-fit: cover;
-            border-radius: 5px;
 
             @media (max-width: 1200px) {
               height: 120px;
@@ -117,7 +115,7 @@
             color: #ffffff;
             text-align: left;
             font-family: var(--h1-font-family, "GasoekOne-Regular", sans-serif);
-            font-size: 20px;
+            font-size: 32px;
             font-weight: var(--h1-font-weight, 400);
             position: relative;
             display: flex;
@@ -164,7 +162,6 @@
 
         .precio-carrito {
           background: var(--principal, #1c0538);
-          border-radius: 5px;
           display: flex;
           flex-direction: row;
           gap: 15px;
@@ -223,7 +220,6 @@
             flex-shrink: 0;
             position: relative;
             border: 2px solid transparent;
-            border-radius: 5px;
             padding: 8px 12px;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -232,7 +228,6 @@
             // Efecto hover con borde
             &:hover {
               border: 2px solid #ffffff;
-              transform: translateY(-2px);
               box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
             }
 

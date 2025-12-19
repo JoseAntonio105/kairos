@@ -19,11 +19,8 @@
 
                 <ul class="dropdown-menu kairos-menu-dropdown" aria-labelledby="kairosMenuDropdown">
                     <li><a class="dropdown-item" href="plataformas.php">Ver todas las plataformas</a></li>
-                    <li><a class="dropdown-item" href="steam.php">Steam</a></li>
-                    <li><a class="dropdown-item" href="playstation.php">PlayStation</a></li>
-                    <li><a class="dropdown-item" href="xbox.php">Xbox</a></li>
-                    <li><a class="dropdown-item" href="nintendo.php">Nintendo</a></li>
                     <li><a class="dropdown-item" href="minijuego-konva/index.html">Juega a Konva Commerce Game!</a></li>
+                    <li><a class="dropdown-item" href="terminoslegales.php">Términos legales</a></li>
                 </ul>
             </div>
 

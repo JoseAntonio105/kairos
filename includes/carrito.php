@@ -10,19 +10,17 @@
         <div class="product-list" id="productList">
             
             <!-- Producto de ejemplo 1 -->
-            <div class="elemento-carrito" data-product-id="1" data-price="99">
+            <div class="elemento-carrito" data-product-id="1" data-price="39.99">
                 <div class="producto-media">
                     <div class="imagen">
-                        <!-- Imagen local del usuario -->
-                        <img class="car-tula" src="assets/img/fc26.jpg" alt="EA Sports FC 26">
+                        <img class="car-tula" src="assets/img/covers/fc26.jpg" alt="EA Sports FC 26">
                     </div>
                     <div class="texto">
                         <div class="producto-1">EA Sports FC 26</div>
-                        <div class="_99 product-price">99€</div>
+                        <div class="_99 product-price">39.99€</div>
                     </div>
                 </div>
                 <div class="item-actions">
-                    <!-- CONTROL DE CANTIDAD CON FLECHAS (NUEVO) -->
                     <div class="item-quantity">
                         <span class="quantity-display" data-quantity>1</span>
                         <div class="quantity-controls">
@@ -30,25 +28,24 @@
                             <button class="quantity-btn decrement-btn" aria-label="Disminuir cantidad">▼</button>
                         </div>
                     </div>
-                    <!-- FIN CONTROL DE CANTIDAD -->
                     <div class="trash-icon remove-item-btn">🗑️</div>
                 </div>
             </div>
 
             <!-- Producto de ejemplo 2 -->
-            <div class="elemento-carrito" data-product-id="2" data-price="49">
+            <div class="elemento-carrito" data-product-id="2" data-price="54.99">
                 <div class="producto-media">
                     <div class="imagen">
-                        <img class="car-tula" src="assets/img/fc26.jpg" alt="God of War">
+                        <img class="car-tula" src="assets/img/covers/mario-wonder.jpg" alt="Super Mario Bros. Wonder">
                     </div>
                     <div class="texto">
-                        <div class="producto-1">God of War</div>
-                        <div class="_99 product-price">49€</div>
+                        <div class="producto-1">Super Mario Bros. Wonder</div>
+                        <div class="_99 product-price">54.99€</div>
                     </div>
                 </div>
                 <div class="item-actions">
                     <div class="item-quantity">
-                        <span class="quantity-display" data-quantity>2</span>
+                        <span class="quantity-display" data-quantity>3</span>
                         <div class="quantity-controls">
                             <button class="quantity-btn increment-btn" aria-label="Aumentar cantidad">▲</button>
                             <button class="quantity-btn decrement-btn" aria-label="Disminuir cantidad">▼</button>
@@ -59,14 +56,14 @@
             </div>
 
             <!-- Producto de ejemplo 3 -->
-            <div class="elemento-carrito" data-product-id="3" data-price="19">
+            <div class="elemento-carrito" data-product-id="3" data-price="64.99">
                 <div class="producto-media">
                     <div class="imagen">
-                        <img class="car-tula" src="assets/img/fc26.jpg" alt="The Witcher 3">
+                        <img class="car-tula" src="assets/img/covers/zelda-totk.jpeg" alt="The Legend of Zelda: Tears of the Kingdom">
                     </div>
                     <div class="texto">
-                        <div class="producto-1">The Witcher 3</div>
-                        <div class="_99 product-price">19€</div>
+                        <div class="producto-1">The Legend of Zelda: Tears of the Kingdom</div>
+                        <div class="_99 product-price">64.99€</div>
                     </div>
                 </div>
                 <div class="item-actions">

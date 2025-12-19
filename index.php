@@ -14,6 +14,16 @@
   </header>
 
   <main>
+    <div class="hero-video">
+      <iframe
+        src="https://www.youtube.com/embed/bM7Z88vwpl0?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=bM7Z88vwpl0"
+        title="EA Sports FC 26 - Official Reveal Trailer"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
     <div class="products">
       <?php
       for ($i = 0; $i < count($productos); $i++) {
