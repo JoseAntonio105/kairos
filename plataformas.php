@@ -22,7 +22,7 @@
         <a href="playstation.php" class="product-card plataforma">
             <div class="product-card-inner">
                 <div class="product-card-media">
-                    <img class="product-card-cover" src="assets/img/playstation.png" alt="PlayStation">
+                    <img class="product-card-cover" src="assets/img/platforms/playstationBig.png" alt="PlayStation">
                 </div>
                 <div class="product-card-bottom">
                     <div class="product-card-price">PLAYSTATION</div>
@@ -33,7 +33,7 @@
         <a href="nintendo.php" class="product-card plataforma">
             <div class="product-card-inner">
                 <div class="product-card-media">
-                    <img class="product-card-cover" src="assets/img/nintendo.png" alt="Nintendo">
+                    <img class="product-card-cover" src="assets/img/platforms/nintendoBig.png" alt="Nintendo">
                 </div>
                 <div class="product-card-bottom">
                     <div class="product-card-price">NINTENDO</div>
@@ -44,7 +44,7 @@
         <a href="xbox.php" class="product-card plataforma">
             <div class="product-card-inner">
                 <div class="product-card-media">
-                    <img class="product-card-cover" src="assets/img/xbox.png" alt="Xbox">
+                    <img class="product-card-cover" src="assets/img/platforms/xboxBig.png" alt="Xbox">
                 </div>
                 <div class="product-card-bottom">
                     <div class="product-card-price">XBOX</div>
@@ -55,7 +55,7 @@
         <a href="steam.php" class="product-card plataforma">
             <div class="product-card-inner">
                 <div class="product-card-media">
-                    <img class="product-card-cover" src="assets/img/steam.png" alt="Steam">
+                    <img class="product-card-cover" src="assets/img/platforms/steamBig.png" alt="Steam">
                 </div>
                 <div class="product-card-bottom">
                     <div class="product-card-price">STEAM</div>
