@@ -56,8 +56,5 @@
   </main>
 
   <footer><?php include("includes/footer.php");?></footer>
-  <script src="js/scripts.js"></script>
-  <script src="js/videoplayer.js"></script>
-  <script src="js/videoplayer-init.js"></script>
 </body>
 </html>

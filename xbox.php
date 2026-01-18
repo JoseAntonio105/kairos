@@ -14,14 +14,37 @@
   </header>
 
   <main>
-  <div class="hero-video">
-    <iframe
-      src="https://www.youtube.com/embed/sfAxRnc6640?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=sfAxRnc6640"
-      frameborder="0"
-      allow="autoplay; encrypted-media; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
+    <div class="videoplayer" id="player-hero" data-youtube-id="sfAxRnc6640">
+    <div class="ratio ratio-21x9 bg-dark">
+        <div class="video"></div>
+    </div>
+
+    <div class="controls controls-dark">
+        <button class="btn btn-lg btn-video-playpause" type="button">
+            <i class="bi bi-play-fill"></i>
+            <i class="bi bi-pause-fill d-none"></i>
+        </button>
+
+        <div class="px-1 w-100">
+            <div class="progress w-100">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+
+        <button class="btn btn-lg btn-video-fullscreen" type="button">
+            <i class="bi bi-arrows-fullscreen"></i>
+        </button>
+
+        <div class="dropup">
+            <button class="btn btn-lg btn-video-volume" data-bs-toggle="dropdown" type="button">
+                <i class="bi bi-volume-down-fill"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end dropup-volume dropdown-menu-dark">
+                <input class="form-range form-range-volume" type="range" value="0">
+            </div>
+        </div>
+    </div>
+</div>
 
     <div class="products">
         <?php
