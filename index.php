@@ -14,15 +14,6 @@
   </header>
 
   <main>
-    <div class="hero-video">
-      <iframe
-        src="https://www.youtube.com/embed/bM7Z88vwpl0?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=bM7Z88vwpl0"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-
   <div class="videoplayer" id="player-hero" data-youtube-id="bM7Z88vwpl0">
     <div class="ratio ratio-21x9 bg-dark">
       <div class="video"></div>
