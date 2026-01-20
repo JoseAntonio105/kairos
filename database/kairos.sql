@@ -179,6 +179,7 @@ create table pedido_linea (
 create table valoracion_producto (
   id_usuario int not null,
   id_producto int not null,
+  valoracion int not null default 5,
   comentario varchar(500) null,
   primary key (id_usuario, id_producto),
   foreign key (id_usuario) references usuario(id),
