@@ -90,6 +90,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- Lógica de Cantidad y Carrito ---
 
     function updateSubtotal() {
+        const productList = document.getElementById('productList');
+        const subtotalElement = document.getElementById('subtotalPrice');
+
+        if (!productList || !subtotalElement) {
+            return; // no estamos en una página con carrito
+        }
         let total = 0;
         const items = productList.querySelectorAll('.elemento-carrito');
         
@@ -106,37 +112,34 @@ document.addEventListener('DOMContentLoaded', function() {
         subtotalElement.textContent = `${total}€`;
     }
 
-    productList.addEventListener('click', function(event) {
-        const target = event.target;
-        const item = target.closest('.elemento-carrito');
-        
-        if (!item) return;
+    document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('cartModal');
+    const openButton = document.getElementById('openCartModal');
+    const closeButton = document.getElementById('closeCartModal');
+    const productList = document.getElementById('productList');
+    const subtotalElement = document.getElementById('subtotalPrice');
+    const removeAllButton = document.getElementById('removeAllItems');
 
-        const quantityDisplay = item.querySelector('[data-quantity]');
-        if (!quantityDisplay) return; 
-        
-        let currentQuantity = parseInt(quantityDisplay.textContent, 10);
+    // Si no existe el layout del carrito en esta página, salimos sin hacer nada
+    if (!modal || !productList || !subtotalElement) {
+        return;
+    }
 
-        if (target.classList.contains('increment-btn')) {
-            currentQuantity++;
-            quantityDisplay.textContent = currentQuantity;
-            updateSubtotal();
+    // --- Funciones del Drawer ---
+    function openDrawer() {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
 
-        } else if (target.classList.contains('decrement-btn')) {
-            if (currentQuantity > 1) {
-                currentQuantity--;
-                quantityDisplay.textContent = currentQuantity;
-                updateSubtotal();
-            } else if (currentQuantity === 1) {
-                item.remove();
-                updateSubtotal();
-            }
-
-        } else if (target.classList.contains('remove-item-btn')) {
-            item.remove();
-            updateSubtotal();
-        }
+    function closeDrawer() {
+        modal.classList.remove('active');
+        setTimeout(() => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        }, 300);
+    }
     });
+
 
     if (removeAllButton) {
         removeAllButton.addEventListener('click', () => {

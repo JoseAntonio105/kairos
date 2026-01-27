@@ -1,8 +1,9 @@
 <?php
 session_start();
-
+header("Cross-Origin-Opener-Policy: same-origin-allow-popups");
 require_once __DIR__ . "/config/db.php";
 require_once __DIR__ . "/config/usuario.php";
+require_once __DIR__ . "/config/google.php";
 
 /* Cargar países */
 $sql = "select id, nombre from pais order by nombre asc";
@@ -89,7 +90,13 @@ unset($_SESSION["register_error"]);
     <?php
         include_once 'includes/head-tag-contents.php';
     ?>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+      window.GOOGLE_CLIENT_ID = "<?= htmlspecialchars(GOOGLE_CLIENT_ID) ?>";
+    </script>
+
 </head>
+
 <body>
 <div class="registro-pc">
   <div class="frame-11">
@@ -116,7 +123,7 @@ unset($_SESSION["register_error"]);
 
         <div class="frame-13 frame-input-group">
           <label for="username" class="label-field">Nombre de usuario:</label>
-          <input type="text" name="username" class="frame-17" placeholder="Introduce un nombre de usuario" required />
+          <input type="text" id="username" name="username" class="frame-17" placeholder="Introduce un nombre de usuario" required />
         </div>
 
         <div class="frame-13 frame-input-group">
@@ -153,7 +160,7 @@ unset($_SESSION["register_error"]);
 
         <div class="frame-26 frame-input-group">
           <label for="correo" class="label-field">Email:</label>
-          <input type="email" name="correo" class="frame-17" placeholder="Introduce tu email" required />
+          <input type="email" id="email" name="correo" class="frame-17" placeholder="Introduce tu email" required />
         </div>
         
         <div class="frame-27 frame-input-group">
@@ -162,10 +169,9 @@ unset($_SESSION["register_error"]);
         </div>
         
         <div class="frame-24">
-          <button type="button" class="frame-23" id="google-register">
-            <div class="log-in">Registrarse con Google</div>
-          </button>
+          <div id="g_id_signin" class="frame-23"></div>
         </div>
+
 
         <!-- Botones Aceptar/Cancelar -->
         <div class="frame-24">
@@ -181,6 +187,6 @@ unset($_SESSION["register_error"]);
     </form>
   </div>
 </div>
-
+<script src="js/google-auth.js"></script>
 </body>
 </html>
