@@ -1,6 +1,7 @@
 <?php
 session_start();
 header("Cross-Origin-Opener-Policy: same-origin-allow-popups");
+
 require_once __DIR__ . "/config/db.php";
 require_once __DIR__ . "/config/usuario.php";
 require_once __DIR__ . "/config/google.php";
@@ -20,6 +21,8 @@ $paises = $res->fetch_all(MYSQLI_ASSOC);
 /* Procesar registro */
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
+    $registro_google = ($_POST["registro_google"] ?? "0") === "1";
+
     $username = trim($_POST["username"] ?? "");
     $nombre = trim($_POST["nombre"] ?? "");
     $apellidos = trim($_POST["apellidos"] ?? "");
@@ -29,7 +32,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $codigo_postal = trim($_POST["codigo_postal"] ?? "");
     $telefono = trim($_POST["telefono"] ?? "");
 
-    if ($username === "" || $nombre === "" || $apellidos === "" || $correo === "" || $password === "" || $pais_id <= 0 || $codigo_postal === "" || $telefono === "") {
+    // Campos obligatorios (password solo si NO es google)
+    if (
+        $username === "" || $nombre === "" || $apellidos === "" || $correo === "" ||
+        $pais_id <= 0 || $codigo_postal === "" || $telefono === "" ||
+        (!$registro_google && $password === "")
+    ) {
         $_SESSION["register_error"] = "Faltan campos obligatorios.";
         header("Location: register.php");
         exit;
@@ -54,6 +62,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 
+    // Si el registro viene de Google, generamos una contraseña aleatoria (para cumplir NOT NULL)
+    if ($registro_google) {
+        $password = bin2hex(random_bytes(16)); // 32 caracteres
+    }
+
     $hash = password_hash($password, PASSWORD_DEFAULT);
     if ($hash === false) {
         $_SESSION["register_error"] = "Error al procesar la contraseña.";
@@ -61,7 +74,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 
-    $nuevo_id = crear_usuario($conn, $username, $hash, $nombre, $apellidos, $correo, $pais_id, $codigo_postal, $telefono, $rol_cliente);
+    $nuevo_id = crear_usuario(
+        $conn,
+        $username,
+        $hash,
+        $nombre,
+        $apellidos,
+        $correo,
+        $pais_id,
+        $codigo_postal,
+        $telefono,
+        $rol_cliente
+    );
 
     if ($nuevo_id === null) {
         $_SESSION["register_error"] = "No se pudo crear el usuario.";
@@ -84,26 +108,26 @@ unset($_SESSION["register_error"]);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <?php
-        include_once 'includes/head-tag-contents.php';
-    ?>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script>
-      window.GOOGLE_CLIENT_ID = "<?= htmlspecialchars(GOOGLE_CLIENT_ID) ?>";
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
 
+  <?php include_once 'includes/head-tag-contents.php'; ?>
+
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script>
+    window.GOOGLE_CLIENT_ID = "<?= htmlspecialchars(GOOGLE_CLIENT_ID) ?>";
+  </script>
 </head>
 
 <body>
 <div class="registro-pc">
   <div class="frame-11">
-    <img class="logo" src="assets/img/kairos.png" onerror="this.src='https://placehold.co/150x50/1c0538/ffffff?text=Kairos'" alt="Kairos Logo"/>
+    <img class="logo" src="assets/img/kairos.png"
+         onerror="this.src='https://placehold.co/150x50/1c0538/ffffff?text=Kairos'"
+         alt="Kairos Logo"/>
   </div>
-  
-  <!-- Contenedor del Formulario -->
+
   <div class="registro">
     <form class="frame-9" method="post" action="register.php">
       <?php if ($error): ?>
@@ -117,25 +141,27 @@ unset($_SESSION["register_error"]);
           ¡Regístrate rellenando el formulario!
         </div>
       </div>
-      
+
       <div class="frame-12">
-        <!-- Campos del Formulario -->
 
         <div class="frame-13 frame-input-group">
           <label for="username" class="label-field">Nombre de usuario:</label>
-          <input type="text" id="username" name="username" class="frame-17" placeholder="Introduce un nombre de usuario" required />
+          <input type="text" id="username" name="username" class="frame-17"
+                 placeholder="Introduce un nombre de usuario" required />
         </div>
 
         <div class="frame-13 frame-input-group">
           <label for="nombre" class="label-field">Nombre:</label>
-          <input type="text" name="nombre" class="frame-17" placeholder="Introduce tu nombre" required />
+          <input type="text" id="nombre" name="nombre" class="frame-17"
+                 placeholder="Introduce tu nombre" required />
         </div>
-        
+
         <div class="frame-25 frame-input-group">
           <label for="apellidos" class="label-field">Apellidos:</label>
-          <input type="text" name="apellidos" class="frame-17" placeholder="Introduce tus apellidos" required />
+          <input type="text" id="apellidos" name="apellidos" class="frame-17"
+                 placeholder="Introduce tus apellidos" required />
         </div>
-        
+
         <div class="frame-25 frame-input-group">
           <label for="country" class="label-field">País:</label>
           <select id="country" name="country" class="frame-17" required>
@@ -150,32 +176,38 @@ unset($_SESSION["register_error"]);
 
         <div class="frame-25 frame-input-group">
           <label for="codigo_postal" class="label-field">Código postal:</label>
-          <input type="text" name="codigo_postal" class="frame-17" placeholder="Introduce tu código postal" required />
+          <input type="text" id="codigo_postal" name="codigo_postal" class="frame-17"
+                 placeholder="Introduce tu código postal" required />
         </div>
 
         <div class="frame-25 frame-input-group">
           <label for="telefono" class="label-field">Teléfono:</label>
-          <input type="text" name="telefono" class="frame-17" placeholder="Introduce tu teléfono" required />
+          <input type="text" id="telefono" name="telefono" class="frame-17"
+                 placeholder="Introduce tu teléfono" required />
         </div>
 
         <div class="frame-26 frame-input-group">
-          <label for="correo" class="label-field">Email:</label>
-          <input type="email" id="email" name="correo" class="frame-17" placeholder="Introduce tu email" required />
+          <label for="email" class="label-field">Email:</label>
+          <input type="email" id="email" name="correo" class="frame-17"
+                 placeholder="Introduce tu email" required />
         </div>
-        
+
         <div class="frame-27 frame-input-group">
           <label for="password" class="label-field">Contraseña:</label>
-          <input type="password" name="password" class="frame-17" placeholder="Crea una contraseña" required />
+          <input type="password" id="password" name="password" class="frame-17"
+                 placeholder="Crea una contraseña" required />
         </div>
-        
+
+        <!-- Botón Google -->
         <div class="frame-24">
           <div id="g_id_signin" class="frame-23"></div>
         </div>
 
+        <!-- Flag para saber si viene de Google -->
+        <input type="hidden" id="registro_google" name="registro_google" value="0">
 
-        <!-- Botones Aceptar/Cancelar -->
         <div class="frame-24">
-          <button type="submit" class="frame-23" name="accion" value="registrar">
+          <button type="submit" class="frame-23">
             <div class="aceptar">Aceptar</div>
           </button>
 
@@ -183,10 +215,12 @@ unset($_SESSION["register_error"]);
             <div class="cancelar">Cancelar</div>
           </a>
         </div>
+
       </div>
     </form>
   </div>
 </div>
+
 <script src="js/google-auth.js"></script>
 </body>
 </html>
